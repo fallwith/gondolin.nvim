@@ -22,6 +22,8 @@ A beautifully dark and calm Neovim color scheme, named after the hidden Elven
 city in Tolkien’s legendarium.
 
 
+  "Great was the fall of Gondolin, greatest of the cities of the Elves."
+
 REQUIREMENTS                                      *gondolin.nvim-requirements*
 
 - Neovim <https://github.com/neovim/neovim> >= 0.8.0 <https://github.com/neovim/neovim/releases/tag/v0.8.0>
