@@ -1,0 +1,337 @@
+# gondolin.nvim
+
+A dark Neovim color scheme inspired by [Zed's](https://zed.dev/) default dark theme.
+
+## Requirements
+
+- [Neovim](https://github.com/neovim/neovim) >= [0.8.0](https://github.com/neovim/neovim/releases/tag/v0.8.0)
+- truecolor terminal support
+- undercurl terminal support (optional)
+
+## Installation
+
+Install the theme with your preferred package manager, such as [lazy.nvim](https://github.com/folke/lazy.nvim):
+
+```lua
+{
+  "wunki/gondolin.nvim",
+  lazy = false,
+  priority = 1000,
+  opts = {},
+}
+```
+
+## Usage
+
+Load the colorscheme:
+
+Vim:
+
+```vim
+colorscheme gondolin
+```
+
+Neovim:
+
+```lua
+vim.cmd.colorscheme("gondolin")
+```
+
+A full plugin spec example using [lazy.nvim](https://github.com/folke/lazy.nvim):
+
+```lua
+return {
+  "wunki/gondolin.nvim",
+  lazy = false,
+  priority = 1000,
+  init = function()
+    vim.cmd.colorscheme("gondolin")
+  end,
+  opts = {...},
+}
+```
+
+## Configuration
+
+> [!IMPORTANT]
+> Set the configuration **BEFORE** loading the color scheme to ensure the settings are applied, otherwise defaults will be used.
+
+The default configuration can be found [here](lua/gondolin/config.lua)
+
+```lua
+require("gondolin").setup({
+  -- enable undercurls for underlined text
+  undercurl = true,
+  -- transparent background
+  transparent = false,
+  -- highlight background for the left gutter
+  gutter = false,
+  -- background for diagnostic virtual text
+  diag_background = true,
+  -- dim inactive windows. Disabled when transparent
+  dim_inactive = false,
+  -- set colors for terminal buffers
+  terminal_colors = true,
+  -- cache highlights and colors for faster startup.
+  -- see Cache section for more details.
+  cache = false,
+
+  styles = {
+    -- style for comments
+    comment = { italic = true },
+    -- style for functions
+    functions = { italic = false },
+    -- style for keywords
+    keyword = { italic = false, bold = false },
+    -- style for statements
+    statement = { italic = false, bold = false },
+    -- style for types
+    type = { italic = false },
+  },
+  -- override default palette and theme colors
+  colors = {
+    palette = {},
+    theme = {
+      dark = {},
+    },
+  },
+  -- adjust overall color balance [-1, 1]
+  color_balance = {
+    dark = { brightness = 0, saturation = 0 },
+  },
+  -- override highlight groups
+  overrides = function(colors)
+    return {}
+  end,
+
+  -- uses lazy.nvim, if installed, to automatically enable needed plugins
+  auto_plugins = true,
+  -- enable highlights for all plugins (disabled if using lazy.nvim)
+  all_plugins = package.loaded.lazy == nil,
+  -- manually enable/disable individual plugins.
+  -- check the `groups/plugins` directory for the exact names
+  plugins = {
+    -- examples:
+    -- rainbow_delimiters = true
+    -- which_key = false
+  },
+
+  -- enable integrations with other applications
+  integrations = {
+    -- automatically set wezterm theme to match the current neovim theme
+    wezterm = {
+      enabled = false,
+      -- neovim will write the theme name to this file
+      -- wezterm will read from this file to know which theme to use
+      path = (os.getenv("TEMP") or "/tmp") .. "/nvim-theme",
+    },
+  },
+})
+```
+
+### Cache
+
+The color scheme comes with a cache option that can be used to speed up startup time.
+
+When you set `cache = true` in your config, the theme colors and all of your edits/adjustments will be saved to a cache file. This is loaded at startup so colors don't need to be recomputed every time.
+
+Any changes you make to your config (e.g. overriding colors or highlight groups) should automatically invalidate the cache and build a new one.
+
+In rare cases where this doesn't happen and you notice your changes aren't being applied, you can manually rebuild the cache by running `:GondolinCache`.
+
+## Integrations
+
+### [Lualine](https://github.com/nvim-lualine/lualine.nvim)
+
+This color scheme comes with a matching Lualine theme.
+
+```lua
+local gondolin = require("lualine.themes.gondolin-dark")
+
+require("lualine").setup({
+  options = {
+    theme = gondolin,
+    -- ... your lualine config
+  },
+})
+```
+
+### [WezTerm](https://wezfurlong.org/wezterm/) and [WezTerm Tabline](https://github.com/michaelbrusegard/tabline.wez)
+
+If you use WezTerm and/or WezTerm Tabline, you can use the `wezterm` integration to automatically switch themes based on the current Neovim theme. This feature requires Wezterm [automatic reload config](https://wezterm.org/config/lua/config/automatically_reload_config.html) to be turned on.
+
+There are a few things to set up for this to work:
+
+1. Enable the integration in your Neovim configuration:
+
+```lua
+require("gondolin").setup({
+  integrations = {
+    wezterm = {
+      enabled = true,
+      path = (os.getenv("TEMP") or "/tmp") .. "/nvim-theme"
+    },
+  },
+})
+```
+
+2. Place the [wezterm](extras/wezterm) and [wezterm tabline](extras/wezterm_tabline) extras in the wezterm color scheme directory. Point wezterms config to that directory:
+
+```lua
+config.color_scheme_dirs = { "~/.config/wezterm/colors" } -- or wherever you want to store the themes
+```
+
+3. Copy [theme_switcher.lua](lua/wezterm) to where your wezterm config is. Add `require("theme_switcher")` to your wezterm config to load the theme switcher.
+
+4. Update the `theme_switcher.lua` file with the correct paths to your files:
+
+```lua
+-- default colorscheme after neovim exits
+local theme_default = "gondolin-dark"
+
+-- this should match the path set in the neovim config
+-- it's best to use a temporary directory for this
+local theme_file = (os.getenv("TEMP") or "/tmp") .. "/nvim-theme"
+
+-- relative path to the directory containing the tabline themes
+-- e.g. if I have placed the tabline extra themes in ./colors/wezterm_tabline then this would be "colors.wezterm_tabline"
+-- this is treated as a relative lua module that will be required by the theme switcher
+local tabline_theme_dir = "colors.wezterm_tabline"
+```
+
+## Customizing Colors
+
+There are two kinds of colors: `PaletteColors` and `ThemeColors`.
+
+`PaletteColors` are defined directly as RGB Hex strings, and have arbitrary names
+that recall their actual color. Conversely, `ThemeColors` are named and grouped _semantically_
+on the basis of their actual function.
+
+In short, a `palette` defines all the available colors, while a `theme` maps the `PaletteColors`
+to specific `ThemeColors` and the same palette color may be assigned to multiple theme colors.
+
+You can change _both_ theme or palette colors using `config.colors`.
+All the palette color names can be found [here](lua/gondolin/colors.lua),
+while their usage by each theme can be found [here](lua/gondolin/themes).
+
+You can see a visual preview of the entire color palette [here](palette_colors.md).
+
+```lua
+require('gondolin').setup({
+  colors = {
+    palette = {
+      -- change all usages of these color names
+      bg1 = "#000000",
+      fg1 = "#FFFFFF",
+    },
+    theme = {
+      -- change specific usages for the theme
+      dark = {
+        ui = {
+          float = {
+            fg = "#ff0000",
+          },
+        },
+      },
+    },
+  }
+})
+```
+
+You can also conveniently add/modify `hlgroups` using the `config.overrides` option.
+Supported keywords are the same for `:h nvim_set_hl` `{val}` parameter.
+
+```lua
+require("gondolin").setup({
+  overrides = function(colors)
+    return {
+      -- Assign a static color to strings
+      String = { fg = colors.palette.string, italic = true },
+      -- theme colors will update dynamically when you change theme!
+      SomePluginHl = { fg = colors.theme.syn.type, bold = true },
+    }
+  end,
+})
+```
+
+### Extracting colors
+
+You can get the palette and theme colors from the colors module like this:
+
+```lua
+-- Get the colors for the current theme
+local colors = require("gondolin.colors")
+local palette_colors = colors.palette
+local theme_colors = colors.theme
+```
+
+and use them in your `opts` function. Example:
+
+```lua
+{
+  "wunki/gondolin.nvim",
+  lazy = false,
+  priority = 1000,
+  opts = function()
+    local colors = require("gondolin.colors")
+    local palette_colors = colors.palette
+    return {
+      colors = {
+        theme = {
+          dark = {
+            ui = {
+              bg_dim = palette_colors.bg2,
+            },
+          },
+        },
+      },
+    }
+  end
+}
+```
+
+## Extras
+
+- [alacritty](extras/alacritty)
+- [foot](extras/foot)
+- [fzf](extras/fzf) (guide: [fzf color schemes](https://github.com/junegunn/fzf/wiki/Color-schemes))
+- [ghostty](extras/ghostty)
+- [kitty](extras/kitty)
+- [lazygit](extras/lazygit)
+- [nushell](extras/nushell)
+- [opencode](extras/opencode) (guide: [OpenCode themes](https://opencode.ai/docs/customization/themes))
+- [tailwind](extras/tailwind)
+- [terminator](extras/terminator)
+- [termux](extras/termux)
+- [tilix](extras/tilix)
+- [tmux](extras/tmux)
+- [vivid](extras/vivid)
+- [vscode terminal](extras/vscode_terminal) (guide: [Visual Studio Code Theme Color](https://code.visualstudio.com/api/references/theme-color))
+- [wezterm](extras/wezterm) (guide: [Defining a Color Scheme in a separate file](https://wezfurlong.org/wezterm/config/appearance.html#defining-a-color-scheme-in-a-separate-file))
+- [wezterm tabline](extras/wezterm_tabline) (guide: [tabline.wez](https://github.com/michaelbrusegard/tabline.wez))
+- [windows terminal](extras/windows_terminal) (guide: [Color schemes in Windows Terminal](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes))
+- [zellij](extras/zellij)
+
+## Contributing
+
+Pull requests are welcome for theme fixes, new features, and new extras.
+
+Using the [Conventional Commits](https://www.conventionalcommits.org/) format for commit messages is recommended.
+
+For the [extras](extras/), we use a simple template system that can be used to generate styles for the different themes.
+
+How to add a new extra template:
+
+1. Create a new template file in [lua/gondolin/extras](lua/gondolin/extras).
+2. Add the name and output file extension to the `extras` table in [lua/gondolin/extras/init.lua](lua/gondolin/extras/init.lua).
+3. To check that your template compiles properly, run `./scripts/build.sh` and check the newly compiled styles in the root [extras](extras/) directory.
+
+> [!IMPORTANT]
+> Please DO NOT commit the compiled files, as they are already automatically built by the CI.
+
+## Acknowledgements
+
+- [zed-dark](https://github.com/mattermill/zed-dark) by mattermill - The color palette this theme is based on
+- [kanagawa-paper.nvim](https://github.com/sho-87/kanagawa-paper.nvim) by Simon Ho - The plugin structure this project is forked from
+- [kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim) by Tommaso Laurenzi - Original theme architecture
+- [tokyonight.nvim](https://github.com/folke/tokyonight.nvim) by folke - Plugin architecture inspiration

@@ -1,0 +1,379 @@
+---@alias ColorSpec string RGB Hex string
+
+---@class GondolinConfig
+---@field _theme? "dark"
+---@field undercurl? boolean
+---@field transparent? boolean
+---@field gutter? boolean
+---@field diag_background? boolean
+---@field dim_inactive? boolean
+---@field terminal_colors? boolean
+---@field cache? boolean
+---@field styles? {comment: vim.api.keyset.highlight, functions: vim.api.keyset.highlight, keyword: vim.api.keyset.highlight, statement: vim.api.keyset.highlight, type: vim.api.keyset.highlight,}
+---@field colors? {palette: PaletteColors, theme: {dark: ThemeColors}}
+---@field color_balance? table<string, ColorOffset>
+---@field overrides? fun(colors: GondolinColors): table<string, vim.api.keyset.highlight>
+---@field all_plugins? boolean
+---@field auto_plugins? boolean
+---@field plugins? table<string, boolean>
+---@field integrations? {wezterm: {enabled: boolean, path: string}}
+
+---@class GondolinCache
+---@field colors GondolinColors
+---@field highlights table<string, vim.api.keyset.highlight>
+---@field termcolors table<number, ColorSpec>
+---@field opts GondolinConfig
+---@field version string
+
+---@class ColorOffset
+---@field brightness number [-1, 1]
+---@field saturation number [-1, 1]
+
+---@class GondolinGroups
+---@field [string] vim.api.keyset.highlight
+
+---@class GondolinColors
+---@field palette? PaletteColors
+---@field theme ThemeColors
+
+---@class PaletteColors
+-- Background Shades (darkest to lightest)
+---@field bg0? ColorSpec Darkest background (terminal dim black)
+---@field bg1? ColorSpec Main editor background
+---@field bg2? ColorSpec Surface/panel background
+---@field bg3? ColorSpec Elevated surface
+---@field bg4? ColorSpec Active line, subheader
+---@field bg5? ColorSpec Element background, borders
+---@field bg6? ColorSpec Diagnostic backgrounds
+---@field bg7? ColorSpec Hover states
+---@field bg8? ColorSpec Bright black
+-- Foreground Shades (brightest to dimmest)
+---@field fg0? ColorSpec Bright white
+---@field fg1? ColorSpec Main foreground
+---@field fg2? ColorSpec Text
+---@field fg3? ColorSpec Terminal foreground
+---@field fg4? ColorSpec Active line number
+---@field fg5? ColorSpec Hidden/ignored
+---@field fg6? ColorSpec Dim white
+---@field fg7? ColorSpec Dim foreground
+---@field fg8? ColorSpec Comments, line numbers
+---@field fg9? ColorSpec Disabled text
+-- Syntax: Variables & Identifiers
+---@field variable? ColorSpec Variables
+---@field variableSpecial? ColorSpec Special variables
+-- Syntax: Functions
+---@field func? ColorSpec Functions, methods
+-- Syntax: Strings
+---@field string? ColorSpec Strings
+---@field stringDoc? ColorSpec Doc strings
+---@field stringRegex? ColorSpec Regex
+---@field stringEscape? ColorSpec Escape sequences
+---@field stringSymbol? ColorSpec Symbols in strings
+---@field stringUrl? ColorSpec URLs
+---@field character? ColorSpec Characters
+-- Syntax: Constants & Numbers
+---@field constant? ColorSpec Constants, numbers, booleans
+---@field float? ColorSpec Floats
+-- Syntax: Types
+---@field type? ColorSpec Types
+---@field typeDefinition? ColorSpec Type definitions
+---@field typeInterface? ColorSpec Interfaces
+-- Syntax: Keywords
+---@field keyword? ColorSpec Main keywords
+---@field keywordAlt? ColorSpec Modifier, function, operator keywords
+---@field keywordDirective? ColorSpec Preprocessor directives
+---@field keywordExport? ColorSpec Export keyword
+-- Syntax: Operators & Punctuation
+---@field operator? ColorSpec Operators
+---@field punctuation? ColorSpec Brackets, delimiters
+---@field punctSpecial? ColorSpec Special punctuation
+-- Syntax: Comments
+---@field comment? ColorSpec Comments
+---@field commentDoc? ColorSpec Doc comments
+---@field commentError? ColorSpec Error comments
+---@field commentWarning? ColorSpec Warning comments
+---@field commentHint? ColorSpec Hint comments
+---@field commentTodo? ColorSpec TODO comments
+---@field commentNote? ColorSpec Note comments
+-- Syntax: Tags (HTML/JSX)
+---@field tag? ColorSpec Tags
+---@field tagAttribute? ColorSpec Tag attributes
+---@field tagDelimiter? ColorSpec Tag delimiters
+---@field tagDoctype? ColorSpec Doctype
+-- Syntax: Other
+---@field attribute? ColorSpec Attributes
+---@field property? ColorSpec Properties
+---@field constructor? ColorSpec Constructors
+---@field parameter? ColorSpec Parameters
+---@field field? ColorSpec Fields
+---@field namespace? ColorSpec Namespaces
+---@field module? ColorSpec Modules
+---@field label? ColorSpec Labels
+---@field symbol? ColorSpec Symbols
+---@field embedded? ColorSpec Embedded code
+---@field enum? ColorSpec Enums
+---@field parent? ColorSpec Parent references
+---@field predictive? ColorSpec Predictive text
+-- Syntax: Text & Markup
+---@field text? ColorSpec Plain text
+---@field textLiteral? ColorSpec Literal text
+---@field emphasisStrong? ColorSpec Bold
+---@field emphasis? ColorSpec Italic
+---@field title? ColorSpec Titles
+---@field linkText? ColorSpec Link text
+---@field linkUri? ColorSpec Link URIs
+-- Syntax: Diff
+---@field diffPlus? ColorSpec Added
+---@field diffMinus? ColorSpec Removed
+-- Diagnostics
+---@field error? ColorSpec Error
+---@field warning? ColorSpec Warning
+---@field info? ColorSpec Info
+---@field hint? ColorSpec Hint
+---@field success? ColorSpec Success/ok
+---@field conflict? ColorSpec Conflict
+-- Diagnostics Backgrounds
+---@field errorBg? ColorSpec Error background
+---@field warningBg? ColorSpec Warning background
+---@field infoBg? ColorSpec Info background
+---@field hintBg? ColorSpec Hint background
+---@field successBg? ColorSpec Success background
+-- VCS/Git Colors
+---@field vcsAdded? ColorSpec Added
+---@field vcsDeleted? ColorSpec Deleted
+---@field vcsModified? ColorSpec Modified
+---@field vcsRenamed? ColorSpec Renamed
+---@field vcsIgnored? ColorSpec Ignored
+---@field vcsConflict? ColorSpec Conflict
+---@field vcsConflictOurs? ColorSpec Conflict ours
+---@field vcsConflictTheirs? ColorSpec Conflict theirs
+-- UI: Borders
+---@field border? ColorSpec Border
+---@field borderVariant? ColorSpec Border variant
+---@field borderFocused? ColorSpec Focused border
+---@field borderSelected? ColorSpec Selected border
+-- UI: Search
+---@field searchMatch? ColorSpec Search match
+-- UI: Selection
+---@field selection? ColorSpec Selection
+-- UI: Scrollbar
+---@field scrollThumb? ColorSpec Scrollbar thumb
+---@field scrollThumbHover? ColorSpec Scrollbar thumb hover
+---@field scrollThumbActive? ColorSpec Scrollbar thumb active
+-- UI: Accent
+---@field accent? ColorSpec Primary accent color
+-- Terminal Colors (ANSI)
+---@field termBlack? ColorSpec Terminal black
+---@field termRed? ColorSpec Terminal red
+---@field termGreen? ColorSpec Terminal green
+---@field termYellow? ColorSpec Terminal yellow
+---@field termBlue? ColorSpec Terminal blue
+---@field termMagenta? ColorSpec Terminal magenta
+---@field termCyan? ColorSpec Terminal cyan
+---@field termWhite? ColorSpec Terminal white
+-- Terminal Bright Colors
+---@field termBlackBright? ColorSpec Terminal bright black
+---@field termRedBright? ColorSpec Terminal bright red
+---@field termGreenBright? ColorSpec Terminal bright green
+---@field termYellowBright? ColorSpec Terminal bright yellow
+---@field termBlueBright? ColorSpec Terminal bright blue
+---@field termMagentaBright? ColorSpec Terminal bright magenta
+---@field termCyanBright? ColorSpec Terminal bright cyan
+---@field termWhiteBright? ColorSpec Terminal bright white
+-- Terminal Dim Colors
+---@field termRedDim? ColorSpec Terminal dim red
+---@field termGreenDim? ColorSpec Terminal dim green
+---@field termYellowDim? ColorSpec Terminal dim yellow
+---@field termBlueDim? ColorSpec Terminal dim blue
+---@field termMagentaDim? ColorSpec Terminal dim magenta
+---@field termCyanDim? ColorSpec Terminal dim cyan
+---@field termWhiteDim? ColorSpec Terminal dim white
+---@field termBlackDim? ColorSpec Terminal dim black
+-- Mode Colors
+---@field modeNormal? ColorSpec Normal mode
+---@field modeInsert? ColorSpec Insert mode
+---@field modeVisual? ColorSpec Visual mode
+---@field modeReplace? ColorSpec Replace mode
+---@field modeCommand? ColorSpec Command mode
+-- Rainbow Colors
+---@field rainbow1? ColorSpec Rainbow 1
+---@field rainbow2? ColorSpec Rainbow 2
+---@field rainbow3? ColorSpec Rainbow 3
+---@field rainbow4? ColorSpec Rainbow 4
+---@field rainbow5? ColorSpec Rainbow 5
+---@field rainbow6? ColorSpec Rainbow 6
+---@field rainbow7? ColorSpec Rainbow 7
+
+
+---@class ThemeColors
+---@field syn? SyntaxElements
+---@field diag? DiagnosticsElements
+---@field vcs? VCSElements
+---@field diff? DiffElements
+---@field ui? UIElements
+---@field modes? ModeElements
+---@field rainbow? RainbowColors
+---@field accent? AccentColors
+---@field term? TermColors
+
+---@class SyntaxElements
+---@field string ColorSpec
+---@field symbol ColorSpec
+---@field variable ColorSpec
+---@field member ColorSpec
+---@field number ColorSpec
+---@field constant ColorSpec
+---@field identifier ColorSpec
+---@field attribute ColorSpec
+---@field parameter ColorSpec
+---@field fun ColorSpec
+---@field statement ColorSpec
+---@field keyword ColorSpec
+---@field operator ColorSpec
+---@field preproc ColorSpec
+---@field type ColorSpec
+---@field regex ColorSpec
+---@field deprecated ColorSpec
+---@field comment ColorSpec
+---@field punct ColorSpec
+---@field special1 ColorSpec
+---@field special2 ColorSpec
+---@field special3 ColorSpec
+---@field special4 ColorSpec
+
+---@class DiagnosticsElements
+---@field error ColorSpec
+---@field ok ColorSpec
+---@field warning ColorSpec
+---@field info ColorSpec
+---@field hint ColorSpec
+---@field error_light ColorSpec
+---@field ok_light ColorSpec
+---@field warning_light ColorSpec
+---@field info_light ColorSpec
+---@field hint_light ColorSpec
+--
+---@class DiffElements
+---@field add ColorSpec
+---@field delete ColorSpec
+---@field change ColorSpec
+---@field text ColorSpec
+---@field add_light ColorSpec
+---@field delete_light ColorSpec
+---@field change_light ColorSpec
+---@field text_light ColorSpec
+
+---@class VCSElements
+---@field added ColorSpec
+---@field removed ColorSpec
+---@field changed ColorSpec
+---@field added_light ColorSpec
+---@field removed_light ColorSpec
+---@field changed_light ColorSpec
+
+---@class ModeElements
+---@field normal ColorSpec
+---@field insert ColorSpec
+---@field visual ColorSpec
+---@field replace ColorSpec
+---@field command ColorSpec
+
+---@class UIElements
+---@field fg ColorSpec Default foreground
+---@field fg_dim ColorSpec Dimmed versions of foreground
+---@field fg_dimmer ColorSpec Even dimmer
+---@field fg_dark ColorSpec Dark foreground text
+---@field fg_reverse ColorSpec Reversed foreground text
+---@field bg_dim ColorSpec Dimmed background
+---@field bg_m4 ColorSpec Darkest background
+---@field bg_m3 ColorSpec Darker background
+---@field bg_m2 ColorSpec
+---@field bg_m1 ColorSpec Dark background
+---@field bg ColorSpec Default background
+---@field bg_p1 ColorSpec Lighter background ColorColumn, Folded, Gutter
+---@field bg_p2 ColorSpec Lighter background Cursor{Line,Column}, TabLineSel (Selected Items)
+---@field bg_gutter ColorSpec {Sign,Fold}Column, LineNr
+---@field bg_search ColorSpec Search background
+---@field bg_cursorline ColorSpec CursorLine background
+---@field bg_cursorline_alt ColorSpec CursorLine background (alternate)
+---@field bg_visual ColorSpec Visual selection background
+---@field bg_statusline ColorSpec Statusline background
+---@field border ColorSpec Border color
+---@field header1 ColorSpec Header1 text
+---@field header2 ColorSpec Header2 text
+---@field special ColorSpec SpecialKey
+---@field nontext ColorSpec LineNr, NonText
+---@field whitespace ColorSpec Whitespace
+---@field win_separator ColorSpec Separator for dividers
+---@field indent ColorSpec Indent line character
+---@field indent_scope ColorSpec Indent scope character
+---@field picker ColorSpec Color of picker letters e.g. bufferline pick buffer
+---@field yank ColorSpec Color of bg for yanked text
+---@field mark ColorSpec Color of mark indicators
+---@field scrollbar ColorSpec Color of scrollbar
+---@field tabline TabElements Tabline colors
+---@field pmenu MenuElements
+---@field float FloatElements
+
+---@class TabElements
+---@field bg ColorSpec
+---@field fg_selected ColorSpec
+---@field bg_selected ColorSpec
+---@field fg_inactive ColorSpec
+---@field bg_inactive ColorSpec
+---@field fg_alternate ColorSpec
+---@field bg_alternate ColorSpec
+---@field indicator ColorSpec
+
+---@class FloatElements
+---@field fg ColorSpec
+---@field bg ColorSpec
+---@field fg_border ColorSpec
+---@field bg_border ColorSpec
+
+---@class MenuElements
+---@field bg ColorSpec
+---@field fg ColorSpec
+---@field fg_border ColorSpec
+---@field fg_sel ColorSpec
+---@field bg_sel ColorSpec
+---@field bg_sbar ColorSpec
+---@field bg_thumb ColorSpec
+---@field bg_border ColorSpec
+
+---@class RainbowColors
+---@field rainbow1 ColorSpec
+---@field rainbow2 ColorSpec
+---@field rainbow3 ColorSpec
+---@field rainbow4 ColorSpec
+---@field rainbow5 ColorSpec
+---@field rainbow6 ColorSpec
+---@field rainbow7 ColorSpec
+
+---@class AccentColors
+---@field accent1 ColorSpec
+---@field accent2 ColorSpec
+---@field accent3 ColorSpec
+---@field accent4 ColorSpec
+---@field accent5 ColorSpec
+---@field invert ColorSpec Highlight color that is a lighter/darker shade of the background
+
+---@class TermColors
+---@field black ColorSpec
+---@field red ColorSpec
+---@field green ColorSpec
+---@field yellow ColorSpec
+---@field blue ColorSpec
+---@field magenta ColorSpec
+---@field cyan ColorSpec
+---@field white ColorSpec
+---@field black_bright ColorSpec
+---@field red_bright ColorSpec
+---@field green_bright ColorSpec
+---@field yellow_bright ColorSpec
+---@field blue_bright ColorSpec
+---@field magenta_bright ColorSpec
+---@field cyan_bright ColorSpec
+---@field white_bright ColorSpec
+---@field indexed1 ColorSpec
+---@field indexed2 ColorSpec
