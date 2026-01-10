@@ -18,7 +18,8 @@ Table of Contents                            *gondolin.nvim-table-of-contents*
 ==============================================================================
 1. Gondolin                                           *gondolin.nvim-gondolin*
 
-A beautifully dark and calm Neovim color scheme.
+A beautifully dark and calm Neovim color scheme, named after the hidden Elven
+city in Tolkien’s legendarium.
 
 
 REQUIREMENTS                                      *gondolin.nvim-requirements*
