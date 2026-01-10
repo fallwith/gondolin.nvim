@@ -1,6 +1,8 @@
-# gondolin.nvim
+# Gondolin
 
-A dark Neovim color scheme inspired by [Zed's](https://zed.dev/) default dark theme.
+A beautifully dark and calm Neovim color scheme.
+
+![Gondolin screenshot](assets/screenshot.png)
 
 ## Requirements
 
