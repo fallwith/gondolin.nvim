@@ -1,6 +1,6 @@
 # Gondolin
 
-A beautifully dark and calm Neovim color scheme.
+A beautifully dark and calm Neovim color scheme, named after the hidden Elven city in Tolkien's legendarium.
 
 ![Gondolin screenshot](assets/screenshot.png)
 
