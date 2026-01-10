@@ -1,0 +1,27 @@
+// -----------------------------------------------------------------------------
+// Gondolin Dark
+// Upstream: https://github.com/wunki/gondolin.nvim/main/extras/vscode_terminal/gondolin-dark.jsonc
+// URL: https://code.visualstudio.com/api/references/theme-color
+// -----------------------------------------------------------------------------
+{
+  "terminal.background": "#080A0D",
+  "terminal.foreground": "#D0D3DA",
+  "terminalCursor.background": "#83AEF8",
+  "terminalCursor.foreground": "#080A0D",
+  "terminal.ansiBlack": "#080A0D",
+  "terminal.ansiBlue": "#83AEF8",
+  "terminal.ansiCyan": "#83AEF8",
+  "terminal.ansiGreen": "#B9EC86",
+  "terminal.ansiMagenta": "#FF8DFF",
+  "terminal.ansiRed": "#FF7A77",
+  "terminal.ansiWhite": "#D6DAE7",
+  "terminal.ansiYellow": "#FFE878",
+  "terminal.ansiBrightBlack": "#505668",
+  "terminal.ansiBrightBlue": "#71FEFF",
+  "terminal.ansiBrightCyan": "#71FFDF",
+  "terminal.ansiBrightGreen": "#B9FF6C",
+  "terminal.ansiBrightMagenta": "#FF8DFF",
+  "terminal.ansiBrightRed": "#FF7774",
+  "terminal.ansiBrightWhite": "#ffffff",
+  "terminal.ansiBrightYellow": "#FFE878"
+}

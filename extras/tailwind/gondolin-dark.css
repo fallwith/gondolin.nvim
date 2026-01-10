@@ -1,0 +1,61 @@
+/* ----------------------------------------------------------------------------- */
+/* Gondolin Dark */
+/* Upstream: https://github.com/wunki/gondolin.nvim/main/extras/tailwind/gondolin-dark.css */
+/* URL: https://tailwindcss.com/ */
+/* ----------------------------------------------------------------------------- */
+
+@theme inline {
+  --color-gondolin-dark-foreground: oklch(from #D0D3DA l c h);
+  --color-gondolin-dark-background: oklch(from #080A0D l c h);
+  --color-gondolin-dark-divider: oklch(from #1C2129 l c h);
+  --color-gondolin-dark-focus: oklch(from #0f3570 l c h);
+  --color-gondolin-dark-highlight: oklch(from #1a1d23 l c h);
+  --color-gondolin-dark-comment: oklch(from #3D4550 l c h);
+
+  --color-gondolin-dark-primary: oklch(from #83AEF8 l c h);
+  --color-gondolin-dark-secondary: oklch(from #B9EC86 l c h);
+  --color-gondolin-dark-tertiary: oklch(from #CC95FF l c h);
+
+  --color-gondolin-dark-success: oklch(from #B9EC86 l c h);
+  --color-gondolin-dark-warning: oklch(from #FFE878 l c h);
+  --color-gondolin-dark-danger: oklch(from #FF7A77 l c h);
+  --color-gondolin-dark-info: oklch(from #83AEF8 l c h);
+  
+  --color-gondolin-dark-content1: oklch(from #080A0D l c h);
+  --color-gondolin-dark-content2: oklch(from #0E1114 l c h);
+  --color-gondolin-dark-content3: oklch(from #0d0f13 l c h);
+  --color-gondolin-dark-content4: oklch(from #080A0D l c h);
+  --color-gondolin-dark-content5: oklch(from #060809 l c h);
+  --color-gondolin-dark-panel: oklch(from #0d0f13 l c h);
+
+  --color-gondolin-dark-rainbow1: oklch(from #FF7A77 l c h);
+  --color-gondolin-dark-rainbow2: oklch(from #FFE878 l c h);
+  --color-gondolin-dark-rainbow3: oklch(from #B9EC86 l c h);
+  --color-gondolin-dark-rainbow4: oklch(from #83AEF8 l c h);
+  --color-gondolin-dark-rainbow5: oklch(from #CC95FF l c h);
+  --color-gondolin-dark-rainbow6: oklch(from #FF8DFF l c h);
+  --color-gondolin-dark-rainbow7: oklch(from #91D8CE l c h);
+
+  --color-gondolin-dark-accent1: oklch(from #83AEF8 l c h);
+  --color-gondolin-dark-accent2: oklch(from #FFBE78 l c h);
+  --color-gondolin-dark-accent3: oklch(from #83AEF8 l c h);
+  --color-gondolin-dark-accent4: oklch(from #3D4550 l c h);
+  --color-gondolin-dark-accent5: oklch(from #FF7A77 l c h);
+
+  --color-gondolin-dark-black: oklch(from #080A0D l c h);
+  --color-gondolin-dark-black-bright: oklch(from #505668 l c h);
+  --color-gondolin-dark-red: oklch(from #FF7A77 l c h);
+  --color-gondolin-dark-red-bright: oklch(from #FF7774 l c h);
+  --color-gondolin-dark-green: oklch(from #B9EC86 l c h);
+  --color-gondolin-dark-green-bright: oklch(from #B9FF6C l c h);
+  --color-gondolin-dark-yellow: oklch(from #FFE878 l c h);
+  --color-gondolin-dark-yellow-bright: oklch(from #FFE878 l c h);
+  --color-gondolin-dark-blue: oklch(from #83AEF8 l c h);
+  --color-gondolin-dark-blue-bright: oklch(from #71FEFF l c h);
+  --color-gondolin-dark-magenta: oklch(from #FF8DFF l c h);
+  --color-gondolin-dark-magenta-bright: oklch(from #FF8DFF l c h);
+  --color-gondolin-dark-cyan: oklch(from #83AEF8 l c h);
+  --color-gondolin-dark-cyan-bright: oklch(from #71FFDF l c h);
+  --color-gondolin-dark-white: oklch(from #D6DAE7 l c h);
+  --color-gondolin-dark-white-bright: oklch(from #ffffff l c h);
+}

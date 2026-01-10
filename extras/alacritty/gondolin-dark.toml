@@ -1,0 +1,45 @@
+# -----------------------------------------------------------------------------
+# Gondolin Dark
+# Upstream: https://github.com/wunki/gondolin.nvim/main/extras/alacritty/gondolin-dark.toml
+# URL: https://github.com/alacritty/alacritty
+# -----------------------------------------------------------------------------
+
+[colors.primary]
+background = '#080A0D'
+foreground = '#D0D3DA'
+
+[colors.cursor]
+cursor = '#83AEF8'
+text = '#080A0D'
+
+[colors.selection]
+background = '#1a1d23'
+foreground = '#A2AEC0'
+
+[colors.normal]
+black = '#080A0D'
+red = '#FF7A77'
+green = '#B9EC86'
+yellow = '#FFE878'
+blue = '#83AEF8'
+magenta = '#FF8DFF'
+cyan = '#83AEF8'
+white = '#D6DAE7'
+
+[colors.bright]
+black = '#505668'
+red = '#FF7774'
+green = '#B9FF6C'
+yellow = '#FFE878'
+blue = '#71FEFF'
+magenta = '#FF8DFF'
+cyan = '#71FFDF'
+white = '#ffffff'
+
+[[colors.indexed_colors]]
+index = 16
+color = '#FFBE78'
+
+[[colors.indexed_colors]]
+index = 17
+color = '#FF7A77'

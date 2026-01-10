@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// Gondolin Dark
+// Upstream: https://github.com/wunki/gondolin.nvim/main/extras/windows_terminal/gondolin-dark.jsonc
+// URL: https://learn.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes
+// -----------------------------------------------------------------------------
+{
+  "name": "Gondolin Dark",
+  "cursorColor": "#83AEF8",
+  "selectionBackground": "#1a1d23",
+  "background": "#080A0D",
+  "foreground": "#D0D3DA",
+  "black": "#080A0D",
+  "blue": "#83AEF8",
+  "green": "#B9EC86",
+  "purple": "#FF8DFF",
+  "red": "#FF7A77",
+  "white": "#D6DAE7",
+  "yellow": "#FFE878",
+  "cyan": "#83AEF8",
+  "brightBlack": "#505668",
+  "brightBlue": "#71FEFF",
+  "brightGreen": "#B9FF6C",
+  "brightPurple": "#FF8DFF",
+  "brightRed": "#FF7774",
+  "brightWhite": "#ffffff",
+  "brightYellow": "#FFE878",
+  "brightCyan": "#71FFDF",
+}
