@@ -28,11 +28,10 @@ describe("gondolin colorscheme", function()
 		assert.same("gondolin", vim.g.colors_name)
 	end)
 
-	it("forces dark background when light is set", function()
+	it("uses light background when light is set", function()
 		vim.o.background = "light"
 		vim.cmd.colorscheme("gondolin")
-		-- Gondolin is dark-only, so it should force dark
-		assert.same("dark", vim.o.background)
+		assert.same("light", vim.o.background)
 		assert.same("gondolin", vim.g.colors_name)
 	end)
 end)
@@ -52,8 +51,27 @@ describe("gondolin-dark colorscheme", function()
 	it("forces dark background when light is set", function()
 		vim.o.background = "light"
 		vim.cmd.colorscheme("gondolin-dark")
-		-- Gondolin-dark forces dark mode
 		assert.same("dark", vim.o.background)
 		assert.same("gondolin-dark", vim.g.colors_name)
+	end)
+end)
+
+describe("gondolin-light colorscheme", function()
+	before_each(function()
+		Config.setup()
+	end)
+
+	it("loads with light background", function()
+		vim.o.background = "light"
+		vim.cmd.colorscheme("gondolin-light")
+		assert.same("light", vim.o.background)
+		assert.same("gondolin-light", vim.g.colors_name)
+	end)
+
+	it("forces light background when dark is set", function()
+		vim.o.background = "dark"
+		vim.cmd.colorscheme("gondolin-light")
+		assert.same("light", vim.o.background)
+		assert.same("gondolin-light", vim.g.colors_name)
 	end)
 end)

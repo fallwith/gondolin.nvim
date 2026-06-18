@@ -42,9 +42,9 @@ end
 function M.setup()
 	vim.o.background = "dark"
 
-	-- Gondolin is a dark-only theme
 	local themes = {
 		dark = "Dark",
+		light = "Light",
 	}
 
 	---@type string[]
@@ -95,7 +95,7 @@ function M.setup()
 
 		-- palette colors, if applicable
 		if info.palette == true then
-			local colors, groups, kopts, err = load_colors({ _theme = "auto" })
+			local colors, groups, kopts, err = load_colors({ _theme = "dark" })
 			if err then
 				goto continue_palette
 			end

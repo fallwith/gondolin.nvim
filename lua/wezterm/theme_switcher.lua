@@ -54,18 +54,22 @@ function M.apply_theme(window, theme)
 end
 
 function M.apply_tabline_theme(theme)
-	if tabline and theme == "gondolin-dark" then
-		tabline.set_theme(M.dark)
+	if tabline and M.tabline_themes and M.tabline_themes[theme] then
+		tabline.set_theme(M.tabline_themes[theme])
 	end
 end
 
 if M.is_plugin_installed("michaelbrusegard/tabline.wez") then
 	tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
-	local ok_dark, dark = pcall(require, tabline_theme_dir .. ".gondolin-dark")
-	if not ok_dark then
-		print("Error loading tabline theme")
+	M.tabline_themes = {}
+	for _, theme in ipairs({ "gondolin-dark", "gondolin-light" }) do
+		local ok, tabline_theme = pcall(require, tabline_theme_dir .. "." .. theme)
+		if ok then
+			M.tabline_themes[theme] = tabline_theme
+		else
+			print("Error loading tabline theme: " .. theme)
+		end
 	end
-	M.dark = dark
 end
 
 wezterm.on("window-config-reloaded", function(window, _)

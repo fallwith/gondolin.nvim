@@ -20,11 +20,15 @@ function M.template(str, table)
 	)
 end
 
---- Get the current theme (always dark - Gondolin only supports dark theme)
+--- Get the current theme variant.
 ---@param opts GondolinConfig
----@return "dark"
+---@return "dark"|"light"
 function M.get_current_theme(opts)
-	return "dark"
+	if opts._theme == "light" or opts._theme == "dark" then
+		return opts._theme
+	end
+
+	return vim.o.background == "light" and "light" or "dark"
 end
 
 -- Clamp a value between min and max

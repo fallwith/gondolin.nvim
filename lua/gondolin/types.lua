@@ -1,7 +1,7 @@
 ---@alias ColorSpec string RGB Hex string
 
 ---@class GondolinConfig
----@field _theme? "dark"
+---@field _theme? "dark"|"light"|"auto"
 ---@field undercurl? boolean
 ---@field transparent? boolean
 ---@field gutter? boolean
@@ -10,7 +10,7 @@
 ---@field terminal_colors? boolean
 ---@field cache? boolean
 ---@field styles? {comment: vim.api.keyset.highlight, functions: vim.api.keyset.highlight, keyword: vim.api.keyset.highlight, statement: vim.api.keyset.highlight, type: vim.api.keyset.highlight,}
----@field colors? {palette: PaletteColors, theme: {dark: ThemeColors}}
+---@field colors? {palette: PaletteColors, theme: {dark: ThemeColors, light: ThemeColors}}
 ---@field color_balance? table<string, ColorOffset>
 ---@field overrides? fun(colors: GondolinColors): table<string, vim.api.keyset.highlight>
 ---@field all_plugins? boolean
@@ -203,7 +203,6 @@
 ---@field rainbow5? ColorSpec Rainbow 5
 ---@field rainbow6? ColorSpec Rainbow 6
 ---@field rainbow7? ColorSpec Rainbow 7
-
 
 ---@class ThemeColors
 ---@field syn? SyntaxElements

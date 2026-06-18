@@ -29,6 +29,7 @@ describe("cache builds", function()
 
 	after_each(function()
 		Cache.delete("dark")
+		Cache.delete("light")
 	end)
 
 	it("on initial load", function()
@@ -42,5 +43,10 @@ describe("cache builds", function()
 
 		vim.cmd.colorscheme("gondolin-dark")
 		assert.same(1, vim.fn.filereadable(vim.fn.stdpath("cache") .. "/gondolin-dark.json"))
+	end)
+
+	it("for light theme", function()
+		vim.cmd.colorscheme("gondolin-light")
+		assert.same(1, vim.fn.filereadable(vim.fn.stdpath("cache") .. "/gondolin-light.json"))
 	end)
 end)

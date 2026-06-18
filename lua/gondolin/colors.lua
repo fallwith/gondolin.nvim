@@ -11,11 +11,13 @@ local M = {}
 function M.setup(opts)
 	opts = require("gondolin.config").extend(opts)
 
-	-- Add to and/or override palette_colors
-	local updated_palette_colors = vim.tbl_extend("force", M.palette, opts.colors.palette or {})
-
-	-- Generate the theme according to the updated palette colors
+	-- Generate the theme according to the current variant
 	local current_theme = util.get_current_theme(opts)
+
+	-- Add to and/or override palette_colors
+	local base_palette = current_theme == "light" and M.light_palette or M.palette
+	local updated_palette_colors = vim.tbl_extend("force", vim.deepcopy(base_palette), opts.colors.palette or {})
+
 	local theme_path = "gondolin.themes." .. current_theme
 	local theme_colors = require(theme_path).get(opts, updated_palette_colors)
 
@@ -284,5 +286,206 @@ M.palette = {
 	rainbow6 = "#FF8DFF",        -- magenta
 	rainbow7 = "#91D8CE",        -- cyan
 }
+
+---@type PaletteColors
+M.light_palette = {
+	-- ==============================================
+	-- GONDOLIN LIGHT PALETTE (inspired by Hunk Paper)
+	-- ==============================================
+
+	-- Warm paper surfaces
+	bg0 = "#e8dccd",
+	bg1 = "#f4efe6",
+	bg2 = "#fffaf3",
+	bg3 = "#f8f1e7",
+	bg4 = "#eee4d6",
+	bg5 = "#e4d6c6",
+	bg6 = "#d8c8b3",
+	bg7 = "#ccb99f",
+	bg8 = "#bca78c",
+
+	-- Ink tones
+	fg0 = "#1f160d",
+	fg1 = "#2f2417",
+	fg2 = "#3b2d1f",
+	fg3 = "#3f3326",
+	fg4 = "#5a4b3a",
+	fg5 = "#6b5b49",
+	fg6 = "#786753",
+	fg7 = "#8f7a65",
+	fg8 = "#9b8367",
+	fg9 = "#b39c80",
+
+	-- Syntax: Variables & Identifiers
+	variable = "#2f2417",
+	variableSpecial = "#77593a",
+
+	-- Syntax: Functions
+	func = "#5a4a8e",
+
+	-- Syntax: Strings
+	string = "#4a6890",
+	stringDoc = "#356b7f",
+	stringRegex = "#7d5bc4",
+	stringEscape = "#9f6c1f",
+	stringSymbol = "#7b5a35",
+	stringUrl = "#4a6890",
+	character = "#356b7f",
+
+	-- Syntax: Constants & Numbers
+	constant = "#9f6c1f",
+	float = "#9f6c1f",
+
+	-- Syntax: Types
+	type = "#5f5f9a",
+	typeDefinition = "#5f5f9a",
+	typeInterface = "#5f5f9a",
+
+	-- Syntax: Keywords
+	keyword = "#7b5a35",
+	keywordAlt = "#77593a",
+	keywordDirective = "#7d5bc4",
+	keywordExport = "#356b7f",
+
+	-- Syntax: Operators & Punctuation
+	operator = "#77593a",
+	punctuation = "#8f7a65",
+	punctSpecial = "#9f6c1f",
+
+	-- Syntax: Comments
+	comment = "#8f7a65",
+	commentDoc = "#786753",
+	commentError = "#b4545b",
+	commentWarning = "#9f6c1f",
+	commentHint = "#4a6890",
+	commentTodo = "#7d5bc4",
+	commentNote = "#356b7f",
+
+	-- Syntax: Tags (HTML/JSX)
+	tag = "#7b5a35",
+	tagAttribute = "#9f6c1f",
+	tagDelimiter = "#8f7a65",
+	tagDoctype = "#7d5bc4",
+
+	-- Syntax: Other
+	attribute = "#9f6c1f",
+	property = "#356b7f",
+	constructor = "#5a4a8e",
+	parameter = "#77593a",
+	field = "#356b7f",
+	namespace = "#5f5f9a",
+	module = "#5f5f9a",
+	label = "#4a6890",
+	symbol = "#7b5a35",
+	embedded = "#77593a",
+	enum = "#5f5f9a",
+	parent = "#9f6c1f",
+	predictive = "#9b8367",
+
+	-- Syntax: Text & Markup
+	text = "#2f2417",
+	textLiteral = "#4a6890",
+	emphasisStrong = "#77593a",
+	emphasis = "#77593a",
+	title = "#2f2417",
+	linkText = "#5a4a8e",
+	linkUri = "#4a6890",
+
+	-- Syntax: Diff
+	diffPlus = "#3f8d58",
+	diffMinus = "#b4545b",
+
+	-- Diagnostics
+	error = "#b4545b",
+	warning = "#9f6c1f",
+	info = "#4a6890",
+	hint = "#7d5bc4",
+	success = "#3f8d58",
+	conflict = "#9f6c1f",
+
+	-- Diagnostics Backgrounds
+	errorBg = "#fbebeb",
+	warningBg = "#f4eadb",
+	infoBg = "#dcebf4",
+	hintBg = "#efe6ff",
+	successBg = "#eaf8ec",
+
+	-- VCS/Git Colors
+	vcsAdded = "#3f8d58",
+	vcsDeleted = "#b4545b",
+	vcsModified = "#7d5bc4",
+	vcsRenamed = "#9f6c1f",
+	vcsIgnored = "#9b8367",
+	vcsConflict = "#9f6c1f",
+	vcsConflictOurs = "#dff0e1",
+	vcsConflictTheirs = "#f6ddde",
+
+	-- UI: Borders
+	border = "#d8c8b3",
+	borderVariant = "#ccb99f",
+	borderFocused = "#77593a",
+	borderSelected = "#2f2417",
+
+	-- UI: Search
+	searchMatch = "#e3d7ff",
+
+	-- UI: Selection
+	selection = "#d7ccbe",
+
+	-- UI: Scrollbar
+	scrollThumb = "#d8c8b3",
+	scrollThumbHover = "#ccb99f",
+	scrollThumbActive = "#bca78c",
+
+	-- UI: Accent
+	accent = "#77593a",
+
+	-- Terminal Colors (ANSI)
+	termBlack = "#2f2417",
+	termRed = "#b4545b",
+	termGreen = "#3f8d58",
+	termYellow = "#9f6c1f",
+	termBlue = "#4a6890",
+	termMagenta = "#7d5bc4",
+	termCyan = "#356b7f",
+	termWhite = "#f4efe6",
+
+	-- Terminal Bright Colors
+	termBlackBright = "#786753",
+	termRedBright = "#c96369",
+	termGreenBright = "#4d9d67",
+	termYellowBright = "#b77d2c",
+	termBlueBright = "#5778a5",
+	termMagentaBright = "#8f6dd6",
+	termCyanBright = "#427f95",
+	termWhiteBright = "#fffaf3",
+
+	-- Terminal Dim Colors
+	termRedDim = "#8f464b",
+	termGreenDim = "#347247",
+	termYellowDim = "#7b5418",
+	termBlueDim = "#3b5575",
+	termMagentaDim = "#6548a0",
+	termCyanDim = "#2d5a6b",
+	termWhiteDim = "#d8c8b3",
+	termBlackDim = "#1f160d",
+
+	-- Mode Colors
+	modeNormal = "#77593a",
+	modeInsert = "#3f8d58",
+	modeVisual = "#7d5bc4",
+	modeReplace = "#b4545b",
+	modeCommand = "#9f6c1f",
+
+	-- Rainbow Colors (for delimiters, etc.)
+	rainbow1 = "#b4545b",
+	rainbow2 = "#9f6c1f",
+	rainbow3 = "#3f8d58",
+	rainbow4 = "#4a6890",
+	rainbow5 = "#7d5bc4",
+	rainbow6 = "#5a4a8e",
+	rainbow7 = "#356b7f",
+}
+
 
 return M

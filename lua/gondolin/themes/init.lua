@@ -12,13 +12,14 @@ function M.setup(opts)
 	end
 
 	vim.o.termguicolors = true
-	vim.g.colors_name = "gondolin-dark"
+	local current_theme = require("gondolin.lib.util").get_current_theme(opts)
+	vim.g.colors_name = opts._theme == "auto" and "gondolin" or "gondolin-" .. current_theme
 
 	local cached = nil
 	local cache_opts = cache.get_opts(opts)
 
 	if opts.cache then
-		cached = cache.read("dark")
+		cached = cache.read(current_theme)
 	end
 
 	if opts.cache and cached and cache.inputs_match(cached, cache_opts) then
@@ -38,11 +39,11 @@ function M.setup(opts)
 			spec = type(spec) == "string" and { link = spec } or spec
 			for _, field in ipairs({ "bg", "fg", "sp" }) do
 				if spec[field] then
-					if opts.color_balance.dark.saturation ~= 0 then
-						spec[field] = apply_saturation(spec[field], opts.color_balance.dark.saturation)
+					if opts.color_balance[current_theme].saturation ~= 0 then
+						spec[field] = apply_saturation(spec[field], opts.color_balance[current_theme].saturation)
 					end
-					if opts.color_balance.dark.brightness ~= 0 then
-						spec[field] = apply_brightness(spec[field], opts.color_balance.dark.brightness)
+					if opts.color_balance[current_theme].brightness ~= 0 then
+						spec[field] = apply_brightness(spec[field], opts.color_balance[current_theme].brightness)
 					end
 				end
 			end
@@ -51,7 +52,7 @@ function M.setup(opts)
 
 		if opts.cache then
 			local container = cache.create_container(colors, groups, term_colors, cache_opts)
-			cache.write("dark", container)
+			cache.write(current_theme, container)
 		end
 
 		return colors, groups, opts

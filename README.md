@@ -1,6 +1,6 @@
 # Gondolin
 
-A beautifully dark and calm Neovim color scheme, named after the hidden Elven city in Tolkien's legendarium.
+A calm Neovim color scheme, named after the hidden Elven city in Tolkien's legendarium.
 
 > "Great was the fall of Gondolin, greatest of the cities of the Elves."
 
@@ -40,6 +40,8 @@ Neovim:
 ```lua
 vim.cmd.colorscheme("gondolin")
 ```
+
+`gondolin` follows `vim.o.background`; use `gondolin-dark` or `gondolin-light` to force a variant.
 
 A full plugin spec example using [lazy.nvim](https://github.com/folke/lazy.nvim):
 
@@ -97,11 +99,13 @@ require("gondolin").setup({
     palette = {},
     theme = {
       dark = {},
+      light = {},
     },
   },
   -- adjust overall color balance [-1, 1]
   color_balance = {
     dark = { brightness = 0, saturation = 0 },
+    light = { brightness = 0, saturation = 0 },
   },
   -- override highlight groups
   overrides = function(colors)
@@ -335,7 +339,8 @@ How to add a new extra template:
 
 ## Acknowledgements
 
-- [zed-dark](https://github.com/mattermill/zed-dark) by mattermill - The color palette this theme is based on
+- [zed-dark](https://github.com/mattermill/zed-dark) by mattermill - The color palette the dark variant is based on
+- [Hunk Paper](https://github.com/modem-dev/hunk) - Inspiration for the light variant
 - [kanagawa-paper.nvim](https://github.com/sho-87/kanagawa-paper.nvim) by Simon Ho - The plugin structure this project is forked from
 - [kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim) by Tommaso Laurenzi - Original theme architecture
 - [tokyonight.nvim](https://github.com/folke/tokyonight.nvim) by folke - Plugin architecture inspiration

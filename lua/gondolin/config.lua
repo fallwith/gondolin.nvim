@@ -2,7 +2,7 @@ local M = {}
 
 ---@class GondolinConfig
 M.defaults = {
-	-- (internal) theme variant - only dark is supported
+	-- (internal) theme variant: "dark", "light", or "auto"
 	_theme = "dark",
 
 	-- enable undercurls for underlined text
@@ -38,11 +38,13 @@ M.defaults = {
 		palette = {},
 		theme = {
 			dark = {},
+			light = {},
 		},
 	},
 	-- adjust overall color balance for the theme [-1, 1]
 	color_balance = {
 		dark = { brightness = 0, saturation = 0 },
+		light = { brightness = 0, saturation = 0 },
 	},
 	-- override highlight groups
 	overrides = function(colors)

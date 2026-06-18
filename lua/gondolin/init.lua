@@ -9,11 +9,11 @@ local M = {}
 function M.load(opts)
 	opts = require("gondolin.config").extend(opts)
 
-	-- Gondolin only supports dark theme
-	vim.o.background = "dark"
+	local current_theme = util.get_current_theme(opts)
+	vim.o.background = current_theme
 
 	if opts.integrations.wezterm.enabled then
-		util.write(vim.fn.expand(opts.integrations.wezterm.path), "gondolin-dark")
+		util.write(vim.fn.expand(opts.integrations.wezterm.path), "gondolin-" .. current_theme)
 	else
 		if vim.fn.filereadable(vim.fn.expand(opts.integrations.wezterm.path)) == 1 then
 			os.remove(vim.fn.expand(opts.integrations.wezterm.path))
@@ -28,18 +28,21 @@ function M.load(opts)
 				end
 			end
 
+			local theme = util.get_current_theme(opts)
 			local colors = require("gondolin.colors").setup(opts)
 			local groups, _ = require("gondolin.groups").setup(colors, opts)
 			local term_colors = require("gondolin.colors").terminal(colors, opts)
 			local cache_opts = cache.get_opts(opts)
 
 			local container = cache.create_container(colors, groups, term_colors, cache_opts)
-			cache.write("dark", container)
+			cache.write(theme, container)
 			vim.cmd.colorscheme("gondolin")
 		end, { desc = "Rebuild the cache for the current Gondolin theme" })
 	else
-		if vim.fn.filereadable(cache.file("dark")) == 1 then
-			cache.delete("dark")
+		for _, theme in ipairs({ "dark", "light" }) do
+			if vim.fn.filereadable(cache.file(theme)) == 1 then
+				cache.delete(theme)
+			end
 		end
 	end
 
