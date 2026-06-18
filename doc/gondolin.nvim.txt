@@ -1,4 +1,4 @@
-*gondolin.nvim.txt*        For NVIM v0.8.0        Last change: 2026 January 10
+*gondolin.nvim.txt*          For NVIM v0.8.0         Last change: 2026 June 18
 
 ==============================================================================
 Table of Contents                            *gondolin.nvim-table-of-contents*
