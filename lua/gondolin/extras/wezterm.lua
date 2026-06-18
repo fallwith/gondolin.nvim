@@ -15,8 +15,8 @@ function M.generate(colors)
 [colors]
 foreground = "${ui.fg}"
 background = "${ui.bg}"
-cursor_bg = "${modes.normal}"
-cursor_border = "${modes.normal}"
+cursor_bg = "${ui.cursor}"
+cursor_border = "${ui.cursor}"
 cursor_fg = "${ui.bg}"
 selection_bg = "${ui.bg_visual}"
 selection_fg = "${ui.fg}"

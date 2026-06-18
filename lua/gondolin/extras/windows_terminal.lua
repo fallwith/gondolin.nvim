@@ -13,7 +13,7 @@ function M.generate(colors)
 // -----------------------------------------------------------------------------
 {
   "name": "${_style_name}",
-  "cursorColor": "${modes.normal}",
+  "cursorColor": "${ui.cursor}",
   "selectionBackground": "${ui.bg_visual}",
   "background": "${ui.bg}",
   "foreground": "${ui.fg}",

@@ -15,6 +15,8 @@ M.defaults = {
 	diag_background = true,
 	-- dim inactive windows. disabled when transparent
 	dim_inactive = false,
+	-- cursor color. set to a hex color string to customize, or leave nil for default (fg)
+	cursor_color = nil,
 	-- set colors for terminal buffers
 	terminal_colors = true,
 	-- cache highlights and colors for faster startup.

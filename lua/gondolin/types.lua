@@ -2,6 +2,7 @@
 
 ---@class GondolinConfig
 ---@field _theme? "dark"|"light"|"auto"
+---@field cursor_color? ColorSpec
 ---@field undercurl? boolean
 ---@field transparent? boolean
 ---@field gutter? boolean
@@ -278,6 +279,7 @@
 ---@field command ColorSpec
 
 ---@class UIElements
+---@field cursor ColorSpec Cursor color
 ---@field fg ColorSpec Default foreground
 ---@field fg_dim ColorSpec Dimmed versions of foreground
 ---@field fg_dimmer ColorSpec Even dimmer

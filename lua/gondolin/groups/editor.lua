@@ -15,7 +15,7 @@ function M.setup(colors, opts)
 		-- CurSearch	Used for highlighting a search pattern under the cursor (see 'hlsearch').
 		CurSearch = { fg = theme.ui.bg, bg = theme.ui.yank_active, bold = true },
 		-- Cursor		Character under the cursor.
-		Cursor = { fg = theme.ui.bg, bg = theme.ui.fg },
+		Cursor = { fg = theme.ui.bg, bg = theme.ui.cursor },
 		-- lCursor		Character under the cursor when |language-mapping| is used (see 'guicursor').
 		lCursor = { link = "Cursor" },
 		-- CursorIM	Like Cursor, but used when in IME mode.

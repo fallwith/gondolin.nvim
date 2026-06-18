@@ -16,6 +16,7 @@ M.get = function(opts, palette)
 			command = palette.modeCommand,
 		},
 		ui = {
+			cursor = opts.cursor_color or palette.modeNormal,
 			fg = palette.fg1,
 			fg_dim = palette.fg4,
 			fg_dimmer = palette.fg7,
@@ -69,15 +70,15 @@ M.get = function(opts, palette)
 				bg_sbar = palette.bg3,
 				bg_thumb = palette.fg8,
 			},
-		float = {
-			fg = palette.fg2,
-			bg = palette.bg2,
-			fg_border = palette.border,
-			bg_border = palette.bg2,
-		},
-		sidebar = {
-			bg = palette.bg2,
-		},
+			float = {
+				fg = palette.fg2,
+				bg = palette.bg2,
+				fg_border = palette.border,
+				bg_border = palette.bg2,
+			},
+			sidebar = {
+				bg = palette.bg2,
+			},
 		},
 		accent = {
 			accent1 = palette.accent,

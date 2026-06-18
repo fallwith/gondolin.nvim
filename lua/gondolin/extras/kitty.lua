@@ -17,7 +17,7 @@ foreground ${ui.fg}
 selection_background ${ui.bg_visual}
 selection_foreground ${ui.fg_dim}
 url_color ${syn.special3}
-cursor ${modes.normal}
+cursor ${ui.cursor}
 cursor_text_color ${ui.bg}
 
 # Tabs

@@ -14,7 +14,7 @@ function M.generate(colors)
 {
   "terminal.background": "${ui.bg}",
   "terminal.foreground": "${ui.fg}",
-  "terminalCursor.background": "${modes.normal}",
+  "terminalCursor.background": "${ui.cursor}",
   "terminalCursor.foreground": "${ui.bg}",
   "terminal.ansiBlack": "${term.black}",
   "terminal.ansiBlue": "${term.blue}",

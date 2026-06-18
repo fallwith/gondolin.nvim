@@ -25,7 +25,7 @@ palette = 15=${term.white_bright}
 
 background = ${ui.bg}
 foreground = ${ui.fg}
-cursor-color = ${modes.normal}
+cursor-color = ${ui.cursor}
 selection-background = ${ui.bg_visual}
 selection-foreground = ${ui.fg_dim}
 ]],

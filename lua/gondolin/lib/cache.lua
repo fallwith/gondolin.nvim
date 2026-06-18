@@ -36,11 +36,7 @@ end
 function M.write(key, data)
 	local ok = pcall(util.write, M.file(key), vim.json.encode(data))
 	if ok then
-		vim.notify(
-			"Cache updated: gondolin-" .. key .. ".json",
-			vim.log.levels.INFO,
-			{ title = "gondolin.nvim" }
-		)
+		vim.notify("Cache updated: gondolin-" .. key .. ".json", vim.log.levels.INFO, { title = "gondolin.nvim" })
 	end
 end
 

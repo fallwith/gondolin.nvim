@@ -17,7 +17,7 @@ background = '${ui.bg}'
 foreground = '${ui.fg}'
 
 [colors.cursor]
-cursor = '${modes.normal}'
+cursor = '${ui.cursor}'
 text = '${ui.bg}'
 
 [colors.selection]

@@ -12,7 +12,7 @@ function M.generate(colors)
 # URL: ${_url}
 # -----------------------------------------------------------------------------
 [cursor]
-color = ${modes.insert} ${modes.normal}
+color = ${modes.insert} ${ui.cursor}
 
 [colors]
 background = ${ui.bg}

@@ -94,114 +94,114 @@ M.palette = {
 	-- ==============================================
 
 	-- Background Shades (darkest to lightest)
-	bg0 = "#060809",      -- darkest (terminal dim black)
-	bg1 = "#080A0D",      -- main editor background
-	bg2 = "#0d0f13",      -- surface/panel background
-	bg3 = "#0E1114",      -- elevated surface
-	bg4 = "#1a1d23",      -- active line, subheader
-	bg5 = "#1C2129",      -- element background, borders
-	bg6 = "#212430",      -- diagnostic backgrounds
-	bg7 = "#262C36",      -- hover states
-	bg8 = "#404658",      -- bright black
+	bg0 = "#060809", -- darkest (terminal dim black)
+	bg1 = "#080A0D", -- main editor background
+	bg2 = "#0d0f13", -- surface/panel background
+	bg3 = "#0E1114", -- elevated surface
+	bg4 = "#1a1d23", -- active line, subheader
+	bg5 = "#1C2129", -- element background, borders
+	bg6 = "#212430", -- diagnostic backgrounds
+	bg7 = "#262C36", -- hover states
+	bg8 = "#404658", -- bright black
 
 	-- Foreground Shades (brightest to dimmest)
-	fg0 = "#ffffff",      -- bright white
-	fg1 = "#D0D3DA",      -- main foreground
-	fg2 = "#C4CAD4",      -- text
-	fg3 = "#c6cad7",      -- terminal foreground
-	fg4 = "#A2AEC0",      -- active line number
-	fg5 = "#a9aec1",      -- hidden/ignored
-	fg6 = "#94a3b8",      -- dim white
-	fg7 = "#6A7587",      -- dim foreground
-	fg8 = "#3D4550",      -- line numbers, nontext
-	fg9 = "#454E5C",      -- disabled text
+	fg0 = "#ffffff", -- bright white
+	fg1 = "#D0D3DA", -- main foreground
+	fg2 = "#C4CAD4", -- text
+	fg3 = "#c6cad7", -- terminal foreground
+	fg4 = "#A2AEC0", -- active line number
+	fg5 = "#a9aec1", -- hidden/ignored
+	fg6 = "#94a3b8", -- dim white
+	fg7 = "#6A7587", -- dim foreground
+	fg8 = "#3D4550", -- line numbers, nontext
+	fg9 = "#454E5C", -- disabled text
 
 	-- Syntax: Variables & Identifiers
-	variable = "#7DA7F7",        -- variables
+	variable = "#7DA7F7", -- variables
 	variableSpecial = "#A6C6FE", -- special variables
 
 	-- Syntax: Functions
-	func = "#A6C6FE",            -- functions, methods
+	func = "#A6C6FE", -- functions, methods
 
 	-- Syntax: Strings
-	string = "#AAE08A",          -- strings
-	stringDoc = "#91D8CE",       -- doc strings
-	stringRegex = "#FFB78C",     -- regex
-	stringEscape = "#eebcbc",    -- escape sequences
-	stringSymbol = "#e6c0b6",    -- symbols in strings
-	stringUrl = "#FFE5DF",       -- URLs
-	character = "#91D8CE",       -- characters
+	string = "#AAE08A", -- strings
+	stringDoc = "#91D8CE", -- doc strings
+	stringRegex = "#FFB78C", -- regex
+	stringEscape = "#eebcbc", -- escape sequences
+	stringSymbol = "#e6c0b6", -- symbols in strings
+	stringUrl = "#FFE5DF", -- URLs
+	character = "#91D8CE", -- characters
 
 	-- Syntax: Constants & Numbers
-	constant = "#FFBE78",        -- constants, numbers, booleans
-	float = "#FFB78C",           -- floats
+	constant = "#FFBE78", -- constants, numbers, booleans
+	float = "#FFB78C", -- floats
 
 	-- Syntax: Types
-	type = "#FFBE78",            -- types
-	typeDefinition = "#F5D8A0",  -- type definitions
-	typeInterface = "#F5D8A0",   -- interfaces
+	type = "#FFBE78", -- types
+	typeDefinition = "#F5D8A0", -- type definitions
+	typeInterface = "#F5D8A0", -- interfaces
 
 	-- Syntax: Keywords
-	keyword = "#CC95FF",         -- main keywords
-	keywordAlt = "#DAB0F6",      -- modifier, function, operator keywords
+	keyword = "#CC95FF", -- main keywords
+	keywordAlt = "#DAB0F6", -- modifier, function, operator keywords
 	keywordDirective = "#FFCAEE", -- preprocessor directives
-	keywordExport = "#A9E1EB",   -- export keyword
+	keywordExport = "#A9E1EB", -- export keyword
 
 	-- Syntax: Operators & Punctuation
-	operator = "#A9E1EB",        -- operators
-	punctuation = "#A4ACCB",     -- brackets, delimiters
-	punctSpecial = "#FFCECE",    -- special punctuation
+	operator = "#A9E1EB", -- operators
+	punctuation = "#A4ACCB", -- brackets, delimiters
+	punctSpecial = "#FFCECE", -- special punctuation
 
 	-- Syntax: Comments
-	comment = "#3D4550",         -- comments
-	commentDoc = "#A4ACCB",      -- doc comments
-	commentError = "#F79294",    -- error comments
-	commentWarning = "#F5D8A0",  -- warning comments
-	commentHint = "#9CBAFF",     -- hint comments
-	commentTodo = "#FFCECE",     -- TODO comments
-	commentNote = "#FFE5DF",     -- note comments
+	comment = "#3D4550", -- comments
+	commentDoc = "#A4ACCB", -- doc comments
+	commentError = "#F79294", -- error comments
+	commentWarning = "#F5D8A0", -- warning comments
+	commentHint = "#9CBAFF", -- hint comments
+	commentTodo = "#FFCECE", -- TODO comments
+	commentNote = "#FFE5DF", -- note comments
 
 	-- Syntax: Tags (HTML/JSX)
-	tag = "#FF889E",             -- tags
-	tagAttribute = "#F5D8A0",    -- tag attributes
-	tagDelimiter = "#91D8CE",    -- tag delimiters
-	tagDoctype = "#DAB0F6",      -- doctype
+	tag = "#FF889E", -- tags
+	tagAttribute = "#F5D8A0", -- tag attributes
+	tagDelimiter = "#91D8CE", -- tag delimiters
+	tagDoctype = "#DAB0F6", -- doctype
 
 	-- Syntax: Other
-	attribute = "#eebcbc",       -- attributes
-	property = "#9CBAFF",        -- properties
-	constructor = "#FFCECE",     -- constructors
-	parameter = "#FAA9AC",       -- parameters
-	field = "#CACBFF",           -- fields
-	namespace = "#F5D8A0",       -- namespaces
-	module = "#F5D8A0",          -- modules
-	label = "#95D1EC",           -- labels
-	symbol = "#eebcbc",          -- symbols
-	embedded = "#FAA9AC",        -- embedded code
-	enum = "#91D8CE",            -- enums
-	parent = "#FFB78C",          -- parent references
-	predictive = "#838AA4",      -- predictive text
+	attribute = "#eebcbc", -- attributes
+	property = "#9CBAFF", -- properties
+	constructor = "#FFCECE", -- constructors
+	parameter = "#FAA9AC", -- parameters
+	field = "#CACBFF", -- fields
+	namespace = "#F5D8A0", -- namespaces
+	module = "#F5D8A0", -- modules
+	label = "#95D1EC", -- labels
+	symbol = "#eebcbc", -- symbols
+	embedded = "#FAA9AC", -- embedded code
+	enum = "#91D8CE", -- enums
+	parent = "#FFB78C", -- parent references
+	predictive = "#838AA4", -- predictive text
 
 	-- Syntax: Text & Markup
-	text = "#D6E0FF",            -- plain text
-	textLiteral = "#AAE08A",     -- literal text
-	emphasisStrong = "#FAA9AC",  -- bold
-	emphasis = "#FAA9AC",        -- italic
-	title = "#D6E0FF",           -- titles
-	linkText = "#CACBFF",        -- link text
-	linkUri = "#9CBAFF",         -- link URIs
+	text = "#D6E0FF", -- plain text
+	textLiteral = "#AAE08A", -- literal text
+	emphasisStrong = "#FAA9AC", -- bold
+	emphasis = "#FAA9AC", -- italic
+	title = "#D6E0FF", -- titles
+	linkText = "#CACBFF", -- link text
+	linkUri = "#9CBAFF", -- link URIs
 
 	-- Syntax: Diff
-	diffPlus = "#AAE08A",        -- added
-	diffMinus = "#F79294",       -- removed
+	diffPlus = "#AAE08A", -- added
+	diffMinus = "#F79294", -- removed
 
 	-- Diagnostics
-	error = "#FF7A77",           -- error
-	warning = "#FFE878",         -- warning
-	info = "#83AEF8",            -- info
-	hint = "#958BCC",            -- hint
-	success = "#B9EC86",         -- success/ok
-	conflict = "#FFA877",        -- conflict
+	error = "#FF7A77", -- error
+	warning = "#FFE878", -- warning
+	info = "#83AEF8", -- info
+	hint = "#958BCC", -- hint
+	success = "#B9EC86", -- success/ok
+	conflict = "#FFA877", -- conflict
 
 	-- Diagnostics Backgrounds
 	errorBg = "#212430",
@@ -238,7 +238,7 @@ M.palette = {
 	scrollThumbActive = "#4a5565",
 
 	-- UI: Accent
-	accent = "#83AEF8",          -- primary accent color
+	accent = "#83AEF8", -- primary accent color
 
 	-- Terminal Colors (ANSI)
 	termBlack = "#080A0D",
@@ -271,20 +271,20 @@ M.palette = {
 	termBlackDim = "#060809",
 
 	-- Mode Colors
-	modeNormal = "#83AEF8",      -- blue accent
-	modeInsert = "#B9EC86",      -- green
-	modeVisual = "#CC95FF",      -- purple keyword
-	modeReplace = "#FF7A77",     -- red
-	modeCommand = "#FFE878",     -- yellow
+	modeNormal = "#83AEF8", -- blue accent
+	modeInsert = "#B9EC86", -- green
+	modeVisual = "#CC95FF", -- purple keyword
+	modeReplace = "#FF7A77", -- red
+	modeCommand = "#FFE878", -- yellow
 
 	-- Rainbow Colors (for delimiters, etc.)
-	rainbow1 = "#FF7A77",        -- red
-	rainbow2 = "#FFE878",        -- yellow
-	rainbow3 = "#B9EC86",        -- green
-	rainbow4 = "#83AEF8",        -- blue
-	rainbow5 = "#CC95FF",        -- purple
-	rainbow6 = "#FF8DFF",        -- magenta
-	rainbow7 = "#91D8CE",        -- cyan
+	rainbow1 = "#FF7A77", -- red
+	rainbow2 = "#FFE878", -- yellow
+	rainbow3 = "#B9EC86", -- green
+	rainbow4 = "#83AEF8", -- blue
+	rainbow5 = "#CC95FF", -- purple
+	rainbow6 = "#FF8DFF", -- magenta
+	rainbow7 = "#91D8CE", -- cyan
 }
 
 ---@type PaletteColors

@@ -100,7 +100,7 @@ export def main [] {
 
         foreground: '${ui.fg}'
         background: '${ui.bg}'
-        cursor: '${modes.normal}'
+        cursor: '${ui.cursor}'
 
         empty: '${term.blue}'
         header: { fg: '${term.green}' attr: 'b' }
