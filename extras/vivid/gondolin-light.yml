@@ -1,0 +1,128 @@
+# -----------------------------------------------------------------------------
+# Gondolin Light
+# Upstream: https://github.com/wunki/gondolin.nvim/main/extras/vivid/gondolin-light.yml
+# URL: https://github.com/sharkdp/vivid
+# -----------------------------------------------------------------------------
+colors:
+  background_color: 'f4efe6'
+  white: 'f4efe6'
+  red: 'b4545b'
+  green: '3f8d58'
+  yellow: '9f6c1f'
+  blue: '4a6890'
+  pink: '7d5bc4'
+  cyan: '356b7f'
+
+  light_red: 'c96369'
+  light_green: '4d9d67'
+  light_blue: '5778a5'
+  light_pink: '8f6dd6'
+  light_cyan: '427f95'
+
+  black: 'ccb99f'
+  gray: 'eee4d6'
+  darkgray: 'e4d6c6'
+  darkergray: 'd8c8b3'
+
+core:
+  normal_text: {}
+  regular_file: {}
+  reset_to_normal: {}
+
+  directory:
+    foreground: light_blue
+
+  symlink:
+    foreground: light_pink
+
+  multi_hard_link: {}
+
+  fifo:
+    foreground: black
+    background: blue
+
+  socket:
+    foreground: black
+    background: light_pink
+
+  door:
+    foreground: black
+    background: light_pink
+
+  block_device:
+    foreground: light_cyan
+    background: darkergray
+
+  character_device:
+    foreground: light_pink
+    background: darkergray
+
+  broken_symlink:
+    foreground: black
+    background: red
+
+  missing_symlink_target:
+    foreground: black
+    background: red
+
+  setuid: {}
+
+  setgid: {}
+
+  file_with_capability: {}
+
+  sticky_other_writable: {}
+
+  other_writable: {}
+
+  sticky: {}
+
+  executable_file:
+    foreground: light_red
+
+text:
+  special:
+    foreground: background_color
+    background: yellow
+
+  todo:
+    font-style: bold
+
+  licenses:
+    foreground: gray
+
+  configuration:
+    foreground: yellow
+
+  other:
+    foreground: yellow
+
+markup:
+  foreground: yellow
+
+programming:
+  source:
+    foreground: green
+
+  tooling:
+    foreground: light_green
+
+    continuous-integration:
+      foreground: green
+
+media:
+  foreground: pink
+
+office:
+  foreground: cyan
+
+archives:
+  foreground: light_cyan
+  font-style: underline
+
+executable:
+  foreground: light_red
+  font-style: bold
+
+unimportant:
+  foreground: darkgray

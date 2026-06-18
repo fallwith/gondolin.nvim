@@ -1,0 +1,45 @@
+# -----------------------------------------------------------------------------
+# Gondolin Light
+# Upstream: https://github.com/wunki/gondolin.nvim/main/extras/alacritty/gondolin-light.toml
+# URL: https://github.com/alacritty/alacritty
+# -----------------------------------------------------------------------------
+
+[colors.primary]
+background = '#f4efe6'
+foreground = '#2f2417'
+
+[colors.cursor]
+cursor = '#77593a'
+text = '#f4efe6'
+
+[colors.selection]
+background = '#d7ccbe'
+foreground = '#786753'
+
+[colors.normal]
+black = '#2f2417'
+red = '#b4545b'
+green = '#3f8d58'
+yellow = '#9f6c1f'
+blue = '#4a6890'
+magenta = '#7d5bc4'
+cyan = '#356b7f'
+white = '#f4efe6'
+
+[colors.bright]
+black = '#786753'
+red = '#c96369'
+green = '#4d9d67'
+yellow = '#b77d2c'
+blue = '#5778a5'
+magenta = '#8f6dd6'
+cyan = '#427f95'
+white = '#fffaf3'
+
+[[colors.indexed_colors]]
+index = 16
+color = '#9f6c1f'
+
+[[colors.indexed_colors]]
+index = 17
+color = '#b4545b'

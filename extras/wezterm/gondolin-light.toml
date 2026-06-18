@@ -1,0 +1,73 @@
+# -----------------------------------------------------------------------------
+# Gondolin Light
+# Upstream: https://github.com/wunki/gondolin.nvim/main/extras/wezterm/gondolin-light.toml
+# URL: https://wezterm.org/config/appearance.html
+# -----------------------------------------------------------------------------
+
+[colors]
+foreground = "#2f2417"
+background = "#f4efe6"
+cursor_bg = "#77593a"
+cursor_border = "#77593a"
+cursor_fg = "#f4efe6"
+selection_bg = "#d7ccbe"
+selection_fg = "#2f2417"
+split = "#d8c8b3"
+compose_cursor = "#77593a"
+scrollbar_thumb = "#d8c8b3"
+
+ansi = [
+  "#2f2417",
+  "#b4545b",
+  "#3f8d58",
+  "#9f6c1f",
+  "#4a6890",
+  "#7d5bc4",
+  "#356b7f",
+  "#f4efe6",
+]
+brights = [
+  "#786753",
+  "#c96369",
+  "#4d9d67",
+  "#b77d2c",
+  "#5778a5",
+  "#8f6dd6",
+  "#427f95",
+  "#fffaf3",
+]
+
+[colors.indexed]
+16 = "#9f6c1f"
+17 = "#b4545b"
+
+[colors.tab_bar]
+background = "#f8f1e7"
+inactive_tab_edge = "#77593a"
+
+[colors.tab_bar.active_tab]
+fg_color = "#77593a"
+bg_color = "#f4efe6"
+intensity = "Bold"
+
+[colors.tab_bar.inactive_tab]
+fg_color = "#786753"
+bg_color = "#f8f1e7"
+
+[colors.tab_bar.inactive_tab_hover]
+fg_color = "#7b5a35"
+bg_color = "#f4efe6"
+
+[colors.tab_bar.new_tab]
+fg_color = "#786753"
+bg_color = "#f8f1e7"
+
+[colors.tab_bar.new_tab_hover]
+fg_color = "#7b5a35"
+bg_color = "#f4efe6"
+intensity = "Bold"
+
+[metadata]
+name = "gondolin-light"
+author = "Simon Ho"
+origin_url = "https://github.com/wunki/gondolin.nvim/main/extras/wezterm/gondolin-light.toml"
