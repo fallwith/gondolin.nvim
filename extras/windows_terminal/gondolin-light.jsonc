@@ -5,7 +5,7 @@
 // -----------------------------------------------------------------------------
 {
   "name": "Gondolin Light",
-  "cursorColor": "#77593a",
+  "cursorColor": "${ui.cursor}",
   "selectionBackground": "#d7ccbe",
   "background": "#f4efe6",
   "foreground": "#2f2417",

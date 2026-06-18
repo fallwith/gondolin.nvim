@@ -6,7 +6,7 @@
 {
   "terminal.background": "#f4efe6",
   "terminal.foreground": "#2f2417",
-  "terminalCursor.background": "#77593a",
+  "terminalCursor.background": "${ui.cursor}",
   "terminalCursor.foreground": "#f4efe6",
   "terminal.ansiBlack": "#2f2417",
   "terminal.ansiBlue": "#4a6890",

@@ -7,8 +7,8 @@
 [colors]
 foreground = "#2f2417"
 background = "#f4efe6"
-cursor_bg = "#77593a"
-cursor_border = "#77593a"
+cursor_bg = "${ui.cursor}"
+cursor_border = "${ui.cursor}"
 cursor_fg = "#f4efe6"
 selection_bg = "#d7ccbe"
 selection_fg = "#2f2417"

@@ -9,7 +9,7 @@ background = '#f4efe6'
 foreground = '#2f2417'
 
 [colors.cursor]
-cursor = '#77593a'
+cursor = '${ui.cursor}'
 text = '#f4efe6'
 
 [colors.selection]

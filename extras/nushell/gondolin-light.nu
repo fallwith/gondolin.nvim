@@ -91,7 +91,7 @@ export def main [] {
 
         foreground: '#2f2417'
         background: '#f4efe6'
-        cursor: '#77593a'
+        cursor: '${ui.cursor}'
 
         empty: '#4a6890'
         header: { fg: '#3f8d58' attr: 'b' }

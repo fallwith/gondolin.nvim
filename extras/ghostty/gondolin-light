@@ -17,6 +17,6 @@ palette = 15=#fffaf3
 
 background = #f4efe6
 foreground = #2f2417
-cursor-color = #77593a
+cursor-color = ${ui.cursor}
 selection-background = #d7ccbe
 selection-foreground = #786753
