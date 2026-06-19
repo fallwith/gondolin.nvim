@@ -1,7 +1,7 @@
 // -----------------------------------------------------------------------------
-// ${_style_name}
-// Upstream: ${_upstream_url}
-// URL: ${_url}
+// Gondolin Dark
+// Upstream: https://github.com/wunki/gondolin.nvim/blob/main/extras/zellij/gondolin-dark.kdl
+// URL: https://zellij.dev/
 // -----------------------------------------------------------------------------
 
 themes {

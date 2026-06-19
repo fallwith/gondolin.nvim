@@ -1,7 +1,7 @@
 local M = {}
 ---@param colors GondolinColors
 ---@param opts? GondolinConfig
-function M.setup(colors, opts)
+function M.get(colors, opts)
 	opts = opts or require("gondolin.config").options
 	local theme = colors.theme
 	return {
@@ -12,20 +12,20 @@ function M.setup(colors, opts)
 		LspSignatureActiveParameter = { fg = theme.modes.insert, bold = true, italic = true },
 		LspCodeLens = { fg = theme.syn.comment, bg = "None", italic = false },
 
-		-- ["@lsp.type.class"] = { link = "Structure" },
+		["@lsp.type.class"] = { fg = theme.syn.type },
 		-- ["@lsp.type.decorator"] = { link = "Function" },
-		-- ["@lsp.type.enum"] = { link = "Structure" },
-		-- ["@lsp.type.enumMember"] = { link = "Constant" },
-		-- ["@lsp.type.interface"] = { link = "Structure" },
+		["@lsp.type.enum"] = { fg = theme.syn.type },
+		["@lsp.type.enumMember"] = { fg = theme.syn.constant },
+		["@lsp.type.interface"] = { fg = theme.syn.type },
 		["@lsp.type.function"] = { fg = theme.syn.fun },
 		["@lsp.type.macro"] = { fg = theme.syn.preproc },
 		["@lsp.type.method"] = { fg = theme.syn.fun }, -- Function
-		["@lsp.type.namespace"] = { fg = theme.syn.keyword }, -- Structure
+		["@lsp.type.namespace"] = { fg = theme.syn.type }, -- Structure
 		["@lsp.type.parameter"] = { fg = theme.syn.parameter }, -- Identifier
-		-- ["@lsp.type.property"] = { link = "Identifier" },
-		-- ["@lsp.type.struct"] = { link = "Structure" },
-		-- ["@lsp.type.type"] = { link = "Type" },
-		-- ["@lsp.type.typeParameter"] = { link = "TypeDef" },
+		["@lsp.type.property"] = { fg = theme.syn.member },
+		["@lsp.type.struct"] = { fg = theme.syn.type },
+		["@lsp.type.type"] = { fg = theme.syn.type },
+		["@lsp.type.typeParameter"] = { fg = theme.syn.type },
 		["@lsp.type.variable"] = { fg = theme.syn.variable }, -- Identifier
 		["@lsp.type.comment"] = { fg = "none" }, -- Allow TODO notes to be shown in comments
 		["@lsp.type.const"] = { fg = theme.syn.constant },
@@ -52,7 +52,7 @@ function M.setup(colors, opts)
 
 		["@lsp.typemod.function.builtin"] = { fg = theme.syn.fun },
 		["@lsp.typemod.function.defaultLibrary"] = { fg = theme.syn.fun },
-		["@lsp.typemod.method.defaultLibrary"] = { fg = theme.syn.keyword },
+		["@lsp.typemod.method.defaultLibrary"] = { fg = theme.syn.fun },
 
 		["@lsp.typemod.operator.injected"] = { fg = theme.syn.operator },
 		["@lsp.typemod.string.injected"] = { fg = theme.syn.string },

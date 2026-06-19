@@ -1,32 +1,32 @@
 # -----------------------------------------------------------------------------
 # Gondolin Light
-# Upstream: https://github.com/wunki/gondolin.nvim/main/extras/lazygit/gondolin-light.yml
+# Upstream: https://github.com/wunki/gondolin.nvim/blob/main/extras/lazygit/gondolin-light.yml
 # URL: https://github.com/jesseduffield/lazygit
 # -----------------------------------------------------------------------------
 
 gui:
   theme:
     activeBorderColor:
-      - "#77593a"
+      - "#46778d"
       - "bold"
     inactiveBorderColor:
-      - "#d8c8b3"
+      - "#bec4b4"
     searchingActiveBorderColor:
-      - "#e3d7ff"
+      - "#eee4ca"
       - "bold"
     optionsTextColor:
-      - "#77593a"
+      - "#637827"
     selectedLineBgColor:
-      - "#eee4d6"
+      - "#f8f1e7"
     cherryPickedCommitFgColor:
-      - "#9b8367"
+      - "#939f91"
     cherryPickedCommitBgColor:
-      - "#b4545b"
+      - "#aa544d"
     markedBaseCommitFgColor:
-      - "#9b8367"
+      - "#939f91"
     markedBaseCommitBgColor:
-      - "#77593a"
+      - "#46778d"
     unstagedChangesColor:
-      - "#7d5bc4"
+      - "#46778d"
     defaultFgColor:
-      - "#2f2417"
+      - "#5c6a72"

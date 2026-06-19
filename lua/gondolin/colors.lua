@@ -115,6 +115,7 @@ M.palette = {
 	fg7 = "#6A7587", -- dim foreground
 	fg8 = "#3D4550", -- line numbers, nontext
 	fg9 = "#454E5C", -- disabled text
+	lineNumber = "#3D4550", -- line numbers
 
 	-- Syntax: Variables & Identifiers
 	variable = "#7DA7F7", -- variables
@@ -290,7 +291,7 @@ M.palette = {
 ---@type PaletteColors
 M.light_palette = {
 	-- ==============================================
-	-- GONDOLIN LIGHT PALETTE (inspired by Hunk Paper)
+	-- GONDOLIN LIGHT PALETTE (Everforest-inspired ink on Gondolin paper)
 	-- ==============================================
 
 	-- Warm paper surfaces
@@ -305,187 +306,187 @@ M.light_palette = {
 	bg8 = "#bca78c",
 
 	-- Ink tones
-	fg0 = "#1f160d",
-	fg1 = "#2f2417",
-	fg2 = "#3b2d1f",
-	fg3 = "#3f3326",
-	fg4 = "#5a4b3a",
-	fg5 = "#6b5b49",
-	fg6 = "#786753",
-	fg7 = "#8f7a65",
-	fg8 = "#9b8367",
-	fg9 = "#b39c80",
+	fg0 = "#3c484f",
+	fg1 = "#5c6a72",
+	fg2 = "#66757d",
+	fg3 = "#708089",
+	fg4 = "#829181",
+	fg5 = "#939f91",
+	fg6 = "#a6b0a0",
+	fg7 = "#b5bcad",
+	fg8 = "#bec5b2",
+	fg9 = "#d0d4bd",
+	lineNumber = "#9a8064",
 
 	-- Syntax: Variables & Identifiers
-	variable = "#2f2417",
-	variableSpecial = "#77593a",
+	variable = "#5c6a72",
+	variableSpecial = "#46778d",
 
 	-- Syntax: Functions
-	func = "#5a4a8e",
+	func = "#477f5e",
 
 	-- Syntax: Strings
-	string = "#4a6890",
-	stringDoc = "#356b7f",
-	stringRegex = "#7d5bc4",
-	stringEscape = "#9f6c1f",
-	stringSymbol = "#7b5a35",
-	stringUrl = "#4a6890",
-	character = "#356b7f",
+	string = "#637827",
+	stringDoc = "#46778d",
+	stringRegex = "#aa5f1b",
+	stringEscape = "#9b6e20",
+	stringSymbol = "#477f5e",
+	stringUrl = "#46778d",
+	character = "#477f5e",
 
 	-- Syntax: Constants & Numbers
-	constant = "#9f6c1f",
-	float = "#9f6c1f",
+	constant = "#aa5f1b",
+	float = "#aa5f1b",
 
 	-- Syntax: Types
-	type = "#5f5f9a",
-	typeDefinition = "#5f5f9a",
-	typeInterface = "#5f5f9a",
+	type = "#46778d",
+	typeDefinition = "#46778d",
+	typeInterface = "#46778d",
 
 	-- Syntax: Keywords
-	keyword = "#7b5a35",
-	keywordAlt = "#77593a",
-	keywordDirective = "#7d5bc4",
-	keywordExport = "#356b7f",
+	keyword = "#aa544d",
+	keywordAlt = "#a15d4f",
+	keywordDirective = "#85647f",
+	keywordExport = "#46778d",
 
 	-- Syntax: Operators & Punctuation
-	operator = "#77593a",
-	punctuation = "#8f7a65",
-	punctSpecial = "#9f6c1f",
+	operator = "#aa5f1b",
+	punctuation = "#748278",
+	punctSpecial = "#9b6e20",
 
 	-- Syntax: Comments
-	comment = "#8f7a65",
-	commentDoc = "#786753",
-	commentError = "#b4545b",
-	commentWarning = "#9f6c1f",
-	commentHint = "#4a6890",
-	commentTodo = "#7d5bc4",
-	commentNote = "#356b7f",
+	comment = "#879484",
+	commentDoc = "#748278",
+	commentError = "#aa544d",
+	commentWarning = "#9b6e20",
+	commentHint = "#46778d",
+	commentTodo = "#85647f",
+	commentNote = "#477f5e",
 
 	-- Syntax: Tags (HTML/JSX)
-	tag = "#7b5a35",
-	tagAttribute = "#9f6c1f",
-	tagDelimiter = "#8f7a65",
-	tagDoctype = "#7d5bc4",
+	tag = "#aa544d",
+	tagAttribute = "#9b6e20",
+	tagDelimiter = "#477f5e",
+	tagDoctype = "#85647f",
 
 	-- Syntax: Other
-	attribute = "#9f6c1f",
-	property = "#356b7f",
-	constructor = "#5a4a8e",
-	parameter = "#77593a",
-	field = "#356b7f",
-	namespace = "#5f5f9a",
-	module = "#5f5f9a",
-	label = "#4a6890",
-	symbol = "#7b5a35",
-	embedded = "#77593a",
-	enum = "#5f5f9a",
-	parent = "#9f6c1f",
-	predictive = "#9b8367",
+	attribute = "#9b6e20",
+	property = "#46778d",
+	constructor = "#477f5e",
+	parameter = "#a15d4f",
+	field = "#46778d",
+	namespace = "#46778d",
+	module = "#46778d",
+	label = "#477f5e",
+	symbol = "#aa5f1b",
+	embedded = "#a15d4f",
+	enum = "#46778d",
+	parent = "#aa5f1b",
+	predictive = "#9ba795",
 
 	-- Syntax: Text & Markup
-	text = "#2f2417",
-	textLiteral = "#4a6890",
-	emphasisStrong = "#77593a",
-	emphasis = "#77593a",
-	title = "#2f2417",
-	linkText = "#5a4a8e",
-	linkUri = "#4a6890",
+	text = "#5c6a72",
+	textLiteral = "#637827",
+	emphasisStrong = "#a15d4f",
+	emphasis = "#a15d4f",
+	title = "#5b6870",
+	linkText = "#85647f",
+	linkUri = "#46778d",
 
 	-- Syntax: Diff
-	diffPlus = "#3f8d58",
-	diffMinus = "#b4545b",
+	diffPlus = "#637827",
+	diffMinus = "#aa544d",
 
 	-- Diagnostics
-	error = "#b4545b",
-	warning = "#9f6c1f",
-	info = "#4a6890",
-	hint = "#7d5bc4",
-	success = "#3f8d58",
-	conflict = "#9f6c1f",
+	error = "#aa544d",
+	warning = "#9b6e20",
+	info = "#46778d",
+	hint = "#85647f",
+	success = "#477f5e",
+	conflict = "#aa5f1b",
 
 	-- Diagnostics Backgrounds
-	errorBg = "#fbebeb",
-	warningBg = "#f4eadb",
-	infoBg = "#dcebf4",
-	hintBg = "#efe6ff",
-	successBg = "#eaf8ec",
+	errorBg = "#f2dfd8",
+	warningBg = "#eee4ca",
+	infoBg = "#e3ece7",
+	hintBg = "#eadfe4",
+	successBg = "#e5ecd2",
 
 	-- VCS/Git Colors
-	vcsAdded = "#3f8d58",
-	vcsDeleted = "#b4545b",
-	vcsModified = "#7d5bc4",
-	vcsRenamed = "#9f6c1f",
-	vcsIgnored = "#9b8367",
-	vcsConflict = "#9f6c1f",
-	vcsConflictOurs = "#dff0e1",
-	vcsConflictTheirs = "#f6ddde",
+	vcsAdded = "#477f5e",
+	vcsDeleted = "#aa544d",
+	vcsModified = "#46778d",
+	vcsRenamed = "#9b6e20",
+	vcsIgnored = "#9ba795",
+	vcsConflict = "#aa5f1b",
+	vcsConflictOurs = "#e5ecd2",
+	vcsConflictTheirs = "#f2dfd8",
 
 	-- UI: Borders
-	border = "#d8c8b3",
-	borderVariant = "#ccb99f",
-	borderFocused = "#77593a",
-	borderSelected = "#2f2417",
+	border = "#bec4b4",
+	borderVariant = "#a4ad9e",
+	borderFocused = "#46778d",
+	borderSelected = "#5c6a72",
 
 	-- UI: Search
-	searchMatch = "#e3d7ff",
+	searchMatch = "#eee4ca",
 
 	-- UI: Selection
-	selection = "#d7ccbe",
+	selection = "#e8e5d5",
 
 	-- UI: Scrollbar
-	scrollThumb = "#d8c8b3",
-	scrollThumbHover = "#ccb99f",
-	scrollThumbActive = "#bca78c",
+	scrollThumb = "#bec4b4",
+	scrollThumbHover = "#a4ad9e",
+	scrollThumbActive = "#879484",
 
 	-- UI: Accent
-	accent = "#77593a",
+	accent = "#637827",
 
 	-- Terminal Colors (ANSI)
-	termBlack = "#2f2417",
-	termRed = "#b4545b",
-	termGreen = "#3f8d58",
-	termYellow = "#9f6c1f",
-	termBlue = "#4a6890",
-	termMagenta = "#7d5bc4",
-	termCyan = "#356b7f",
+	termBlack = "#5c6a72",
+	termRed = "#aa544d",
+	termGreen = "#637827",
+	termYellow = "#aa5f1b",
+	termBlue = "#46778d",
+	termMagenta = "#85647f",
+	termCyan = "#477f5e",
 	termWhite = "#f4efe6",
 
 	-- Terminal Bright Colors
-	termBlackBright = "#786753",
-	termRedBright = "#c96369",
-	termGreenBright = "#4d9d67",
-	termYellowBright = "#b77d2c",
-	termBlueBright = "#5778a5",
-	termMagentaBright = "#8f6dd6",
-	termCyanBright = "#427f95",
+	termBlackBright = "#748278",
+	termRedBright = "#bb625b",
+	termGreenBright = "#718735",
+	termYellowBright = "#bd6e22",
+	termBlueBright = "#53879e",
+	termMagentaBright = "#95728e",
+	termCyanBright = "#548f6c",
 	termWhiteBright = "#fffaf3",
 
 	-- Terminal Dim Colors
-	termRedDim = "#8f464b",
-	termGreenDim = "#347247",
-	termYellowDim = "#7b5418",
-	termBlueDim = "#3b5575",
-	termMagentaDim = "#6548a0",
-	termCyanDim = "#2d5a6b",
-	termWhiteDim = "#d8c8b3",
-	termBlackDim = "#1f160d",
+	termRedDim = "#88423d",
+	termGreenDim = "#4e611e",
+	termYellowDim = "#854a14",
+	termBlueDim = "#345f73",
+	termMagentaDim = "#684f64",
+	termCyanDim = "#386b4f",
+	termWhiteDim = "#bec4b4",
+	termBlackDim = "#3c484f",
 
 	-- Mode Colors
-	modeNormal = "#77593a",
-	modeInsert = "#3f8d58",
-	modeVisual = "#7d5bc4",
-	modeReplace = "#b4545b",
-	modeCommand = "#9f6c1f",
+	modeNormal = "#46778d",
+	modeInsert = "#477f5e",
+	modeVisual = "#85647f",
+	modeReplace = "#aa544d",
+	modeCommand = "#aa5f1b",
 
 	-- Rainbow Colors (for delimiters, etc.)
-	rainbow1 = "#b4545b",
-	rainbow2 = "#9f6c1f",
-	rainbow3 = "#3f8d58",
-	rainbow4 = "#4a6890",
-	rainbow5 = "#7d5bc4",
-	rainbow6 = "#5a4a8e",
-	rainbow7 = "#356b7f",
+	rainbow1 = "#aa544d",
+	rainbow2 = "#aa5f1b",
+	rainbow3 = "#9b6e20",
+	rainbow4 = "#637827",
+	rainbow5 = "#477f5e",
+	rainbow6 = "#46778d",
+	rainbow7 = "#85647f",
 }
-
 
 return M

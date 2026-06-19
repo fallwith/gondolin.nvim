@@ -15,32 +15,32 @@ function M.get(colors, opts)
 
 		RenderMarkdownH1Bg = {
 			fg = theme.ui.fg,
-			bg = colors.palette.bg2,
+			bg = theme.ui.bg_dim,
 			bold = true,
 		},
 		RenderMarkdownH2Bg = {
 			fg = theme.ui.fg,
-			bg = colors.palette.bg2,
+			bg = theme.ui.bg_dim,
 			bold = true,
 		},
 		RenderMarkdownH3Bg = {
 			fg = theme.ui.fg,
-			bg = colors.palette.bg2,
+			bg = theme.ui.bg_dim,
 			bold = true,
 		},
 		RenderMarkdownH4Bg = {
 			fg = theme.ui.fg,
-			bg = colors.palette.bg2,
+			bg = theme.ui.bg_dim,
 			bold = true,
 		},
 		RenderMarkdownH5Bg = {
 			fg = theme.ui.fg,
-			bg = colors.palette.bg2,
+			bg = theme.ui.bg_dim,
 			bold = true,
 		},
 		RenderMarkdownH6Bg = {
 			fg = theme.ui.fg,
-			bg = colors.palette.bg2,
+			bg = theme.ui.bg_dim,
 			bold = true,
 		},
 	}

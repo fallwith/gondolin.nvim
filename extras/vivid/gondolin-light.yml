@@ -1,28 +1,28 @@
 # -----------------------------------------------------------------------------
 # Gondolin Light
-# Upstream: https://github.com/wunki/gondolin.nvim/main/extras/vivid/gondolin-light.yml
+# Upstream: https://github.com/wunki/gondolin.nvim/blob/main/extras/vivid/gondolin-light.yml
 # URL: https://github.com/sharkdp/vivid
 # -----------------------------------------------------------------------------
 colors:
   background_color: 'f4efe6'
   white: 'f4efe6'
-  red: 'b4545b'
-  green: '3f8d58'
-  yellow: '9f6c1f'
-  blue: '4a6890'
-  pink: '7d5bc4'
-  cyan: '356b7f'
+  red: 'aa544d'
+  green: '637827'
+  yellow: 'aa5f1b'
+  blue: '46778d'
+  pink: '85647f'
+  cyan: '477f5e'
 
-  light_red: 'c96369'
-  light_green: '4d9d67'
-  light_blue: '5778a5'
-  light_pink: '8f6dd6'
-  light_cyan: '427f95'
+  light_red: 'bb625b'
+  light_green: '718735'
+  light_blue: '53879e'
+  light_pink: '95728e'
+  light_cyan: '548f6c'
 
-  black: 'ccb99f'
-  gray: 'eee4d6'
-  darkgray: 'e4d6c6'
-  darkergray: 'd8c8b3'
+  black: 'e4d6c6'
+  gray: 'fffaf3'
+  darkgray: 'f8f1e7'
+  darkergray: 'eee4d6'
 
 core:
   normal_text: {}

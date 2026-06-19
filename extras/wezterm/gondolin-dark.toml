@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------------
 # Gondolin Dark
-# Upstream: https://github.com/wunki/gondolin.nvim/main/extras/wezterm/gondolin-dark.toml
+# Upstream: https://github.com/wunki/gondolin.nvim/blob/main/extras/wezterm/gondolin-dark.toml
 # URL: https://wezterm.org/config/appearance.html
 # -----------------------------------------------------------------------------
 
@@ -70,4 +70,4 @@ intensity = "Bold"
 [metadata]
 name = "gondolin-dark"
 author = "Simon Ho"
-origin_url = "https://github.com/wunki/gondolin.nvim/main/extras/wezterm/gondolin-dark.toml"
+origin_url = "https://github.com/wunki/gondolin.nvim/blob/main/extras/wezterm/gondolin-dark.toml"

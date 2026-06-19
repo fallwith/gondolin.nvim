@@ -21,6 +21,41 @@ describe("group is loadable", function()
 	end
 end)
 
+describe("group color interface", function()
+	it("uses one highlight module entrypoint", function()
+		local paths = vim.api.nvim_get_runtime_file("lua/gondolin/groups/**/*.lua", true)
+
+		for _, path in ipairs(paths) do
+			if not path:match("/groups/init%.lua$") and not path:match("/groups/completion%.lua$") then
+				local source = table.concat(vim.fn.readfile(path), "\n")
+				assert.is_not_nil(source:match("function M%.get"), path)
+				assert.is_nil(source:match("function M%.setup"), path)
+			end
+		end
+	end)
+
+	it("does not bypass theme colors", function()
+		local paths = vim.api.nvim_get_runtime_file("lua/gondolin/groups/**/*.lua", true)
+
+		for _, path in ipairs(paths) do
+			local source = table.concat(vim.fn.readfile(path), "\n")
+			assert.is_nil(source:match("colors%.palette"), path)
+		end
+	end)
+
+	it("maps core treesitter captures explicitly", function()
+		local opts = Config.extend({ all_plugins = false, auto_plugins = false })
+		local colors = require("gondolin.colors").setup(opts)
+		local groups = Groups.setup(colors, opts)
+
+		assert.same(colors.theme.syn.type, groups["@module"].fg)
+		assert.same(colors.theme.syn.fun, groups["@function.call"].fg)
+		assert.same(colors.theme.syn.keyword, groups["@keyword.function"].fg)
+		assert.same(colors.theme.syn.constant, groups["@constant"].fg)
+		assert.same(colors.theme.syn.member, groups["@property"].fg)
+	end)
+end)
+
 describe("group config", function()
 	it("does all plugins", function()
 		local opts = Config.extend({ all_plugins = true, auto_plugins = false })

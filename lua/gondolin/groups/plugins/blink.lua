@@ -3,7 +3,7 @@ local M = {}
 function M.get(colors, opts)
 	local theme = colors.theme
 
-	return {
+	return vim.tbl_extend("force", {
 		BlinkCmpMenu = { link = "Pmenu" },
 		BlinkCmpMenuBorder = { fg = theme.ui.pmenu.fg_border, bg = theme.ui.pmenu.bg_border },
 		BlinkCmpMenuSelection = { link = "PmenuSel" },
@@ -26,32 +26,7 @@ function M.get(colors, opts)
 
 		BlinkCmpKind = { fg = theme.accent.accent4 },
 		BlinkCmpKindText = { fg = theme.ui.fg },
-		BlinkCmpKindMethod = { link = "@function.method" },
-		BlinkCmpKindFunction = { link = "Function" },
-		BlinkCmpKindConstructor = { link = "@constructor" },
-		BlinkCmpKindField = { link = "@variable.member" },
-		BlinkCmpKindVariable = { link = "@variable" },
-		BlinkCmpKindClass = { link = "Type" },
-		BlinkCmpKindInterface = { link = "Type" },
-		BlinkCmpKindModule = { link = "@module" },
-		BlinkCmpKindProperty = { link = "@property" },
-		BlinkCmpKindUnit = { link = "Number" },
-		BlinkCmpKindValue = { link = "String" },
-		BlinkCmpKindEnum = { link = "Type" },
-		BlinkCmpKindKeyword = { link = "Keyword" },
-		BlinkCmpKindSnippet = { link = "Special" },
-		BlinkCmpKindColor = { link = "Special" },
-		BlinkCmpKindFile = { link = "Directory" },
-		BlinkCmpKindReference = { link = "Special" },
-		BlinkCmpKindFolder = { link = "Directory" },
-		BlinkCmpKindEnumMember = { link = "Constant" },
-		BlinkCmpKindConstant = { link = "Constant" },
-		BlinkCmpKindStruct = { link = "Type" },
-		BlinkCmpKindEvent = { link = "Type" },
-		BlinkCmpKindOperator = { link = "Operator" },
-		BlinkCmpKindTypeParameter = { link = "Type" },
-		BlinkCmpKindCopilot = { link = "String" },
-	}
+	}, require("gondolin.groups.completion").kind_links("BlinkCmpKind"))
 end
 
 return M

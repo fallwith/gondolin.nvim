@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------------
 # Gondolin Dark
-# Upstream: https://github.com/wunki/gondolin.nvim/main/extras/nushell/gondolin-dark.nu
+# Upstream: https://github.com/wunki/gondolin.nvim/blob/main/extras/nushell/gondolin-dark.nu
 # URL: https://www.nushell.sh/
 # -----------------------------------------------------------------------------
 
@@ -64,7 +64,7 @@ export def main [] {
         shape_filepath: '#83AEF8'
         shape_flag: { fg: '#83AEF8' attr: 'b' }
         shape_float: { fg: '#FF7774' attr: 'b' }
-        shape_garbage: { fg: '${fg.dim}' bg: '#FF7A77' attr: 'b' } # Keeping red and white for garbage
+        shape_garbage: { fg: '#A2AEC0' bg: '#FF7A77' attr: 'b' } # Keeping red and white for garbage
         shape_glob_interpolation: { fg: '#83AEF8' attr: 'b' }
         shape_globpattern: { fg: '#83AEF8' attr: 'b' }
         shape_int: { fg: '#FF7A77' attr: 'b' }

@@ -59,6 +59,7 @@
 ---@field fg7? ColorSpec Dim foreground
 ---@field fg8? ColorSpec Comments, line numbers
 ---@field fg9? ColorSpec Disabled text
+---@field lineNumber? ColorSpec Line numbers
 -- Syntax: Variables & Identifiers
 ---@field variable? ColorSpec Variables
 ---@field variableSpecial? ColorSpec Special variables
@@ -303,7 +304,8 @@
 ---@field header1 ColorSpec Header1 text
 ---@field header2 ColorSpec Header2 text
 ---@field special ColorSpec SpecialKey
----@field nontext ColorSpec LineNr, NonText
+---@field nontext ColorSpec NonText
+---@field line_nr ColorSpec LineNr
 ---@field whitespace ColorSpec Whitespace
 ---@field win_separator ColorSpec Separator for dividers
 ---@field indent ColorSpec Indent line character

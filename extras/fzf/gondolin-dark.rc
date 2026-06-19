@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------------
 # Gondolin Dark
-# Upstream: https://github.com/wunki/gondolin.nvim/main/extras/fzf/gondolin-dark.rc
+# Upstream: https://github.com/wunki/gondolin.nvim/blob/main/extras/fzf/gondolin-dark.rc
 # URL: https://github.com/junegunn/fzf/tree/master#environment-variables
 # Note: You can either export the following as an environment variable (export FZF_DEFAULT_OPTS='...') or
 #       add the following to an opts file and point FZF_DEFAULT_OPTS_FILE to it.

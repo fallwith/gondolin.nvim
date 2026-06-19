@@ -1,85 +1,85 @@
 // -----------------------------------------------------------------------------
-// ${_style_name}
-// Upstream: ${_upstream_url}
-// URL: ${_url}
+// Gondolin Light
+// Upstream: https://github.com/wunki/gondolin.nvim/blob/main/extras/zellij/gondolin-light.kdl
+// URL: https://zellij.dev/
 // -----------------------------------------------------------------------------
 
 themes {
     gondolin-light {
         text_unselected {
-            base 47 36 23
+            base 92 106 114
             background 0
-            emphasis_0 180 84 91
-            emphasis_1 159 108 31
-            emphasis_2 63 141 88
-            emphasis_3 74 104 144
+            emphasis_0 170 84 77
+            emphasis_1 170 95 27
+            emphasis_2 155 110 32
+            emphasis_3 99 120 39
         }
         text_selected {
-            base 47 36 23
-            background 238 228 214
-            emphasis_0 180 84 91
-            emphasis_1 159 108 31
-            emphasis_2 63 141 88
-            emphasis_3 74 104 144
+            base 92 106 114
+            background 248 241 231
+            emphasis_0 170 84 77
+            emphasis_1 170 95 27
+            emphasis_2 155 110 32
+            emphasis_3 99 120 39
         }
         ribbon_selected {
             base 244 239 230
-            background 119 89 58
-            emphasis_0 180 84 91
-            emphasis_1 159 108 31
-            emphasis_2 63 141 88
-            emphasis_3 74 104 144
+            background 70 119 141
+            emphasis_0 170 84 77
+            emphasis_1 170 95 27
+            emphasis_2 155 110 32
+            emphasis_3 99 120 39
         }
         ribbon_unselected {
             base 244 239 230
-            background 125 91 196
-            emphasis_0 180 84 91
-            emphasis_1 159 108 31
-            emphasis_2 63 141 88
-            emphasis_3 74 104 144
+            background 133 100 127
+            emphasis_0 170 84 77
+            emphasis_1 170 95 27
+            emphasis_2 155 110 32
+            emphasis_3 99 120 39
         }
         table_title {
-            base 47 36 23
+            base 92 106 114
             background 0
-            emphasis_0 180 84 91
-            emphasis_1 159 108 31
-            emphasis_2 63 141 88
-            emphasis_3 74 104 144
+            emphasis_0 170 84 77
+            emphasis_1 170 95 27
+            emphasis_2 155 110 32
+            emphasis_3 99 120 39
         }
         table_cell_selected {
-            base 47 36 23
-            background 238 228 214
-            emphasis_0 180 84 91
-            emphasis_1 159 108 31
-            emphasis_2 63 141 88
-            emphasis_3 74 104 144
+            base 92 106 114
+            background 248 241 231
+            emphasis_0 170 84 77
+            emphasis_1 170 95 27
+            emphasis_2 155 110 32
+            emphasis_3 99 120 39
         }
         table_cell_unselected {
-            base 47 36 23
+            base 92 106 114
             background 0
-            emphasis_0 180 84 91
-            emphasis_1 159 108 31
-            emphasis_2 63 141 88
-            emphasis_3 74 104 144
+            emphasis_0 170 84 77
+            emphasis_1 170 95 27
+            emphasis_2 155 110 32
+            emphasis_3 99 120 39
         }
         list_selected {
-            base 47 36 23
-            background 238 228 214
-            emphasis_0 180 84 91
-            emphasis_1 159 108 31
-            emphasis_2 63 141 88
-            emphasis_3 74 104 144
+            base 92 106 114
+            background 248 241 231
+            emphasis_0 170 84 77
+            emphasis_1 170 95 27
+            emphasis_2 155 110 32
+            emphasis_3 99 120 39
         }
         list_unselected {
-            base 47 36 23
+            base 92 106 114
             background 0
-            emphasis_0 180 84 91
-            emphasis_1 159 108 31
-            emphasis_2 63 141 88
-            emphasis_3 74 104 144
+            emphasis_0 170 84 77
+            emphasis_1 170 95 27
+            emphasis_2 155 110 32
+            emphasis_3 99 120 39
         }
         frame_selected {
-            base 125 91 196
+            base 133 100 127
             background 0
             emphasis_0 0
             emphasis_1 0
@@ -87,7 +87,7 @@ themes {
             emphasis_3 0
         }
         frame_highlight {
-            base 63 141 88
+            base 71 127 94
             background 0
             emphasis_0 0
             emphasis_1 0
@@ -95,32 +95,32 @@ themes {
             emphasis_3 0
         }
         exit_code_success {
-            base 63 141 88
+            base 71 127 94
             background 0
-            emphasis_0 234 248 236
+            emphasis_0 229 236 210
             emphasis_1 0
             emphasis_2 0
             emphasis_3 0
         }
         exit_code_error {
-            base 180 84 91
+            base 170 84 77
             background 0
-            emphasis_0 251 235 235
+            emphasis_0 242 223 216
             emphasis_1 0
             emphasis_2 0
             emphasis_3 0
         }
         multiplayer_user_colors {
-            player_1 180 84 91
-            player_2 159 108 31
-            player_3 63 141 88
-            player_4 74 104 144
-            player_5 125 91 196
-            player_6 90 74 142
-            player_7 53 107 127
-            player_8 119 89 58
-            player_9 159 108 31
-            player_10 74 104 144
+            player_1 170 84 77
+            player_2 170 95 27
+            player_3 155 110 32
+            player_4 99 120 39
+            player_5 71 127 94
+            player_6 70 119 141
+            player_7 133 100 127
+            player_8 99 120 39
+            player_9 170 95 27
+            player_10 70 119 141
         }
     }
 }

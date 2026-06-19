@@ -2,7 +2,7 @@ local M = {}
 
 ---@param colors GondolinColors
 ---@param opts? GondolinConfig
-function M.setup(colors, opts)
+function M.get(colors, opts)
 	opts = opts or require("gondolin.config").options
 	local theme = colors.theme
 

@@ -1,45 +1,45 @@
 # -----------------------------------------------------------------------------
 # Gondolin Light
-# Upstream: https://github.com/wunki/gondolin.nvim/main/extras/alacritty/gondolin-light.toml
+# Upstream: https://github.com/wunki/gondolin.nvim/blob/main/extras/alacritty/gondolin-light.toml
 # URL: https://github.com/alacritty/alacritty
 # -----------------------------------------------------------------------------
 
 [colors.primary]
 background = '#f4efe6'
-foreground = '#2f2417'
+foreground = '#5c6a72'
 
 [colors.cursor]
-cursor = '${ui.cursor}'
+cursor = '#46778d'
 text = '#f4efe6'
 
 [colors.selection]
-background = '#d7ccbe'
-foreground = '#786753'
+background = '#e8e5d5'
+foreground = '#829181'
 
 [colors.normal]
-black = '#2f2417'
-red = '#b4545b'
-green = '#3f8d58'
-yellow = '#9f6c1f'
-blue = '#4a6890'
-magenta = '#7d5bc4'
-cyan = '#356b7f'
+black = '#5c6a72'
+red = '#aa544d'
+green = '#637827'
+yellow = '#aa5f1b'
+blue = '#46778d'
+magenta = '#85647f'
+cyan = '#477f5e'
 white = '#f4efe6'
 
 [colors.bright]
-black = '#786753'
-red = '#c96369'
-green = '#4d9d67'
-yellow = '#b77d2c'
-blue = '#5778a5'
-magenta = '#8f6dd6'
-cyan = '#427f95'
+black = '#748278'
+red = '#bb625b'
+green = '#718735'
+yellow = '#bd6e22'
+blue = '#53879e'
+magenta = '#95728e'
+cyan = '#548f6c'
 white = '#fffaf3'
 
 [[colors.indexed_colors]]
 index = 16
-color = '#9f6c1f'
+color = '#aa5f1b'
 
 [[colors.indexed_colors]]
 index = 17
-color = '#b4545b'
+color = '#aa544d'

@@ -1,4 +1,5 @@
 local Util = require("gondolin.lib.util")
+local Context = require("gondolin.extras.context")
 
 local M = {}
 
@@ -34,9 +35,9 @@ local function load_colors(opts)
 		return gondolin.load(opts)
 	end)
 	if not ok then
-		return nil, nil, nil, nil, colors
+		error("failed to load Gondolin colors: " .. colors)
 	end
-	return colors, groups, kopts, nil
+	return colors, groups, kopts
 end
 
 function M.setup()
@@ -53,82 +54,47 @@ function M.setup()
 
 	for _, extra in ipairs(names) do
 		local info = M.mapping[extra]
-		local ok_plugin, plugin = pcall(require, "gondolin.extras." .. extra)
-		if not ok_plugin then
-			goto continue_extra
-		end
+		local plugin = require("gondolin.extras." .. extra)
 
 		-- colors for each theme
 		for theme, theme_name in pairs(themes) do
-			local colors, groups, kopts, err = load_colors({ _theme = theme })
-			if err then
-				goto continue_theme
-			end
+			local colors, groups, kopts = load_colors({ _theme = theme })
 
 			if colors and colors.theme then
-				local filename = extra
-					.. (info.subdir and "/" .. info.subdir .. "/" or "")
-					.. "/gondolin"
-					.. (info.sep or "-")
-					.. theme
-					.. "."
-					.. info.ext
-				filename = string.gsub(filename, "%.$", "") -- remove trailing dot when no extension
+				local filename = Context.filename(extra, info, theme)
 				local path = vim.fn.expand("%:p:h") .. "/extras/" .. filename
 
-				local t = vim.deepcopy(colors.theme)
-				t["_url"] = info.url
-				t["_upstream_url"] = "https://github.com/wunki/gondolin.nvim/main/extras/" .. filename
-				t["_package_name"] = "Gondolin"
-				t["_style_name"] = "Gondolin " .. theme_name
-				t["_name"] = "gondolin-" .. theme
-				t["_theme"] = theme
+				local t = Context.with_metadata(
+					colors.theme,
+					info,
+					filename,
+					"gondolin-" .. theme,
+					"Gondolin " .. theme_name,
+					theme
+				)
 				print("[write] " .. filename)
 
-				local ok_gen, out = pcall(plugin.generate, t, groups, kopts)
-				if ok_gen then
-					Util.write(path, out)
-				end
+				local out = Context.assert_rendered(extra, plugin.generate(t, groups, kopts))
+				Util.write(path, out)
 			end
-			::continue_theme::
 		end
 
 		-- palette colors, if applicable
 		if info.palette == true then
-			local colors, groups, kopts, err = load_colors({ _theme = "dark" })
-			if err then
-				goto continue_palette
-			end
+			local colors, groups, kopts = load_colors({ _theme = "dark" })
 
 			if colors and colors.palette then
-				local filename = extra
-					.. (info.subdir and "/" .. info.subdir .. "/" or "")
-					.. "/gondolin"
-					.. (info.sep or "-")
-					.. "palette"
-					.. "."
-					.. info.ext
-				filename = string.gsub(filename, "%.$", "") -- remove trailing dot when no extension
+				local filename = Context.filename(extra, info, "palette")
 				local path = vim.fn.expand("%:p:h") .. "/extras/" .. filename
 
-				local p = vim.deepcopy(colors.palette)
-				p["_url"] = info.url
-				p["_upstream_url"] = "https://github.com/wunki/gondolin.nvim/main/extras/" .. filename
-				p["_package_name"] = "Gondolin"
-				p["_style_name"] = "Gondolin Palette"
-				p["_name"] = "gondolin-palette"
+				local p = Context.with_metadata(colors.palette, info, filename, "gondolin-palette", "Gondolin Palette")
 				print("[write] " .. filename)
 
-				local ok_genp, outp = pcall(plugin.generate_palette, p, groups, kopts)
-				if ok_genp then
-					Util.write(path, outp)
-				end
+				local outp = Context.assert_rendered(extra, plugin.generate_palette(p, groups, kopts))
+				Util.write(path, outp)
 			end
-			::continue_palette::
 		end
 	end
-
-	::continue_extra::
 end
 
 return M

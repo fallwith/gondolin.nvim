@@ -4,10 +4,12 @@ local hex_to_rgb = require("gondolin.lib.hsluv").hex_to_rgb_full
 local function format_colors(tbl)
 	local output = {}
 	for k, v in pairs(tbl) do
-		if type(v) == "string" and v ~= "none" then
+		if type(v) == "string" and v:match("^#%x%x%x%x%x%x$") then
 			output[k] = hex_to_rgb(v, true)
 		elseif type(v) == "table" then
-			format_colors(v)
+			output[k] = format_colors(v)
+		else
+			output[k] = v
 		end
 	end
 	return output
@@ -18,6 +20,9 @@ local M = {}
 --- @param colors ThemeColors
 function M.generate(colors)
 	local formatted = {}
+	formatted._style_name = colors._style_name
+	formatted._upstream_url = colors._upstream_url
+	formatted._url = colors._url
 	formatted._name = colors._name
 	formatted.modes = format_colors(colors.modes)
 	formatted.ui = format_colors(colors.ui)

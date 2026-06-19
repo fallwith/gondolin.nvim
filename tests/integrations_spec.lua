@@ -3,6 +3,9 @@ local util = require("gondolin.lib.util")
 
 describe("wezterm themes are updated", function()
 	before_each(function()
+		-- Reset background so the `auto` colorscheme isn't influenced by
+		-- state leaked from specs that ran earlier in the suite.
+		vim.o.background = "dark"
 		Config.setup({
 			integrations = {
 				wezterm = {

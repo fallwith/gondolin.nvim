@@ -2,7 +2,7 @@ local M = {}
 
 ---@param colors GondolinColors
 ---@param opts? GondolinConfig
-function M.setup(colors, opts)
+function M.get(colors, opts)
 	opts = opts or require("gondolin.config").options
 	local theme = colors.theme
 
@@ -18,14 +18,21 @@ function M.setup(colors, opts)
 		["@variable.member"] = { fg = theme.syn.member },
 		--
 		-- @constant (Constant)              constant identifiers
+		["@constant"] = { fg = theme.syn.constant },
 		-- @constant.builtin       built-in constant values
+		["@constant.builtin"] = { fg = theme.syn.constant, bold = true },
 		-- @constant.macro         constants defined by the preprocessor
+		["@constant.macro"] = { fg = theme.syn.preproc },
 		--
 		-- @module (Structure)      modules or namespaces
+		["@module"] = { fg = theme.syn.type },
 		-- @module.builtin         built-in modules or namespaces
+		["@module.builtin"] = { fg = theme.syn.type, bold = true },
 		-- @label                  `GOTO` and other labels (e.g. `label:` in C), including heredoc labels
+		["@label"] = { fg = theme.syn.special3 },
 		--
 		-- @string                 string literals
+		["@string"] = { fg = theme.syn.string },
 		-- @string.documentation   string documenting code (e.g. Python docstrings)
 		-- @string.regexp          regular expressions
 		["@string.regexp"] = { fg = theme.syn.regex },
@@ -41,25 +48,39 @@ function M.setup(colors, opts)
 		-- @character.special      special characters (e.g. wildcards)
 		--
 		-- @boolean                boolean literals
+		["@boolean"] = { fg = theme.syn.constant, bold = true },
 		-- @number                 numeric literals
+		["@number"] = { fg = theme.syn.number },
 		-- @number.float           floating-point number literals
+		["@number.float"] = { fg = theme.syn.number },
 		--
 		-- @type                   type or class definitions and annotations
+		["@type"] = { fg = theme.syn.type },
 		-- @type.builtin           built-in types
+		["@type.builtin"] = { fg = theme.syn.type, bold = true },
 		-- @type.definition        identifiers in type definitions (e.g. `typedef <type> <identifier>` in C)
+		["@type.definition"] = { fg = theme.syn.type },
 		--
 		-- @attribute              attribute annotations (e.g. Python decorators, Rust lifetimes)
 		["@attribute"] = { fg = theme.syn.attribute },
 		-- @attribute.builtin      builtin annotations (e.g. `@property` in Python)
+		["@attribute.builtin"] = { fg = theme.syn.attribute, bold = true },
 		-- @property               the key in key/value pairs
+		["@property"] = { fg = theme.syn.member },
 		--
 		-- @function               function definitions
+		["@function"] = vim.tbl_extend("force", { fg = theme.syn.fun }, opts.styles.functions),
 		-- @function.builtin       built-in functions
+		["@function.builtin"] = vim.tbl_extend("force", { fg = theme.syn.fun }, opts.styles.functions),
 		-- @function.call          function calls
+		["@function.call"] = vim.tbl_extend("force", { fg = theme.syn.fun }, opts.styles.functions),
 		-- @function.macro         preprocessor macros
+		["@function.macro"] = { fg = theme.syn.preproc },
 		--
 		-- @function.method        method definitions
+		["@function.method"] = vim.tbl_extend("force", { fg = theme.syn.fun }, opts.styles.functions),
 		-- @function.method.call   method calls
+		["@function.method.call"] = vim.tbl_extend("force", { fg = theme.syn.fun }, opts.styles.functions),
 		--
 		-- @constructor            constructor calls and type instantiations
 		["@constructor"] = { fg = theme.syn.type },
@@ -67,26 +88,36 @@ function M.setup(colors, opts)
 		["@operator"] = { fg = theme.syn.operator },
 		--
 		-- @keyword                keywords not fitting into specific categories
+		["@keyword"] = vim.tbl_extend("force", { fg = theme.syn.keyword }, opts.styles.keyword),
 		-- @keyword.coroutine      keywords related to coroutines (e.g. `go` in Go, `async/await` in Python)
+		["@keyword.coroutine"] = vim.tbl_extend("force", { fg = theme.syn.keyword }, opts.styles.keyword),
 		-- @keyword.function       keywords that define a function (e.g. `func` in Go, `def` in Python)
+		["@keyword.function"] = vim.tbl_extend("force", { fg = theme.syn.keyword }, opts.styles.keyword),
 		-- @keyword.operator       operators that are English words (e.g. `and`, `or`)
 		["@keyword.operator"] = { fg = theme.syn.operator, bold = true },
 		-- @keyword.import         keywords for including modules (e.g. `import`, `from` in Python)
 		["@keyword.import"] = { fg = theme.syn.preproc },
 		-- @keyword.type           keywords defining composite types (e.g. `struct`, `enum`)
+		["@keyword.type"] = vim.tbl_extend("force", { fg = theme.syn.keyword }, opts.styles.keyword),
 		-- @keyword.modifier       keywords defining type modifiers (e.g. `const`, `static`, `public`)
+		["@keyword.modifier"] = vim.tbl_extend("force", { fg = theme.syn.statement }, opts.styles.statement),
 		-- @keyword.repeat         keywords related to loops (e.g. `for`, `while`)
+		["@keyword.repeat"] = vim.tbl_extend("force", { fg = theme.syn.keyword }, opts.styles.keyword),
 		-- @keyword.return         keywords like `return` and `yield`
 		["@keyword.return"] = vim.tbl_extend("force", { fg = theme.syn.keyword }, opts.styles.keyword),
+		-- @keyword.conditional         keywords related to conditionals (e.g. `if`, `else`)
+		["@keyword.conditional"] = vim.tbl_extend("force", { fg = theme.syn.keyword }, opts.styles.keyword),
+		-- @keyword.conditional.ternary ternary operator (e.g. `?`, `:`)
+		["@keyword.conditional.ternary"] = { fg = theme.syn.operator },
 		-- @keyword.debug          keywords related to debugging
+		["@keyword.debug"] = vim.tbl_extend("force", { fg = theme.diag.warning }, opts.styles.keyword),
 		-- @keyword.exception      keywords related to exceptions (e.g. `throw`, `catch`)
 		["@keyword.exception"] = vim.tbl_extend("force", { fg = theme.syn.keyword }, opts.styles.statement),
-
-		-- @keyword.conditional         keywords related to conditionals (e.g. `if`, `else`)
-		-- @keyword.conditional.ternary ternary operator (e.g. `?`, `:`)
 		--
 		-- @keyword.directive           various preprocessor directives and shebangs
+		["@keyword.directive"] = { fg = theme.syn.preproc },
 		-- @keyword.directive.define    preprocessor definition directives
+		["@keyword.directive.define"] = { fg = theme.syn.preproc },
 		--
 		-- @punctuation.delimiter  delimiters (e.g. `;`, `.`, `,`)
 		["@punctuation.delimiter"] = { fg = theme.syn.punct },
@@ -137,6 +168,7 @@ function M.setup(colors, opts)
 		-- @markup.raw             literal or verbatim text (e.g. inline code)
 		["@markup.raw"] = { fg = theme.syn.string },
 		-- @markup.raw.block       literal or verbatim text as a stand-alone block
+		["@markup.raw.block"] = { fg = theme.syn.string },
 		--
 		-- @markup.list            list markers
 		-- @markup.list.checked    checked todo-style list markers

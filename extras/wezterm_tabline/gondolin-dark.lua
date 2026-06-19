@@ -1,6 +1,6 @@
 -----------------------------------------------------------------------------
 --- Gondolin Dark
---- Upstream: https://github.com/wunki/gondolin.nvim/main/extras/wezterm_tabline/gondolin-dark.lua
+--- Upstream: https://github.com/wunki/gondolin.nvim/blob/main/extras/wezterm_tabline/gondolin-dark.lua
 --- URL: https://github.com/michaelbrusegard/tabline.wez
 -----------------------------------------------------------------------------
 

@@ -73,7 +73,7 @@ export def main [] {
         shape_filepath: '${term.cyan}'
         shape_flag: { fg: '${term.blue}' attr: 'b' }
         shape_float: { fg: '${term.red_bright}' attr: 'b' }
-        shape_garbage: { fg: '${fg.dim}' bg: '${diag.error}' attr: 'b' } # Keeping red and white for garbage
+        shape_garbage: { fg: '${ui.fg_dim}' bg: '${diag.error}' attr: 'b' } # Keeping red and white for garbage
         shape_glob_interpolation: { fg: '${term.cyan}' attr: 'b' }
         shape_globpattern: { fg: '${term.cyan}' attr: 'b' }
         shape_int: { fg: '${term.red}' attr: 'b' }

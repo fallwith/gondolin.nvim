@@ -3,7 +3,7 @@ local M = {}
 function M.get(colors, opts)
 	local theme = colors.theme
 
-	return {
+	return vim.tbl_extend("force", {
 		CmpCompletion = { link = "Pmenu" },
 		CmpCompletionSel = { link = "PmenuSel" },
 		CmpCompletionBorder = { fg = theme.ui.bg_search, bg = theme.ui.pmenu.bg },
@@ -20,32 +20,7 @@ function M.get(colors, opts)
 
 		CmpItemKindDefault = { fg = theme.ui.fg_dimmer },
 		CmpItemKindText = { fg = theme.ui.fg },
-		CmpItemKindMethod = { link = "@function.method" },
-		CmpItemKindFunction = { link = "Function" },
-		CmpItemKindConstructor = { link = "@constructor" },
-		CmpItemKindField = { link = "@variable.member" },
-		CmpItemKindVariable = { link = "@variable" },
-		CmpItemKindClass = { link = "Type" },
-		CmpItemKindInterface = { link = "Type" },
-		CmpItemKindModule = { link = "@module" },
-		CmpItemKindProperty = { link = "@property" },
-		CmpItemKindUnit = { link = "Number" },
-		CmpItemKindValue = { link = "String" },
-		CmpItemKindEnum = { link = "Type" },
-		CmpItemKindKeyword = { link = "Keyword" },
-		CmpItemKindSnippet = { link = "Special" },
-		CmpItemKindColor = { link = "Special" },
-		CmpItemKindFile = { link = "Directory" },
-		CmpItemKindReference = { link = "Special" },
-		CmpItemKindFolder = { link = "Directory" },
-		CmpItemKindEnumMember = { link = "Constant" },
-		CmpItemKindConstant = { link = "Constant" },
-		CmpItemKindStruct = { link = "Type" },
-		CmpItemKindEvent = { link = "Type" },
-		CmpItemKindOperator = { link = "Operator" },
-		CmpItemKindTypeParameter = { link = "Type" },
-		CmpItemKindCopilot = { link = "String" },
-	}
+	}, require("gondolin.groups.completion").kind_links("CmpItemKind"))
 end
 
 return M

@@ -1,28 +1,28 @@
 // -----------------------------------------------------------------------------
 // Gondolin Light
-// Upstream: https://github.com/wunki/gondolin.nvim/main/extras/windows_terminal/gondolin-light.jsonc
+// Upstream: https://github.com/wunki/gondolin.nvim/blob/main/extras/windows_terminal/gondolin-light.jsonc
 // URL: https://learn.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes
 // -----------------------------------------------------------------------------
 {
   "name": "Gondolin Light",
-  "cursorColor": "${ui.cursor}",
-  "selectionBackground": "#d7ccbe",
+  "cursorColor": "#46778d",
+  "selectionBackground": "#e8e5d5",
   "background": "#f4efe6",
-  "foreground": "#2f2417",
-  "black": "#2f2417",
-  "blue": "#4a6890",
-  "green": "#3f8d58",
-  "purple": "#7d5bc4",
-  "red": "#b4545b",
+  "foreground": "#5c6a72",
+  "black": "#5c6a72",
+  "blue": "#46778d",
+  "green": "#637827",
+  "purple": "#85647f",
+  "red": "#aa544d",
   "white": "#f4efe6",
-  "yellow": "#9f6c1f",
-  "cyan": "#356b7f",
-  "brightBlack": "#786753",
-  "brightBlue": "#5778a5",
-  "brightGreen": "#4d9d67",
-  "brightPurple": "#8f6dd6",
-  "brightRed": "#c96369",
+  "yellow": "#aa5f1b",
+  "cyan": "#477f5e",
+  "brightBlack": "#748278",
+  "brightBlue": "#53879e",
+  "brightGreen": "#718735",
+  "brightPurple": "#95728e",
+  "brightRed": "#bb625b",
   "brightWhite": "#fffaf3",
-  "brightYellow": "#b77d2c",
-  "brightCyan": "#427f95",
+  "brightYellow": "#bd6e22",
+  "brightCyan": "#548f6c",
 }

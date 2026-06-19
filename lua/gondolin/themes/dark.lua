@@ -41,6 +41,7 @@ M.get = function(opts, palette)
 			header2 = palette.constant,
 			special = palette.accent,
 			nontext = palette.fg8,
+			line_nr = palette.lineNumber,
 			whitespace = palette.fg8,
 			win_separator = palette.border,
 			indent = palette.bg5,

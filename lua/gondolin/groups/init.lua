@@ -67,7 +67,7 @@ function M.setup(colors, opts)
 	-- add base groups
 	for _, group in ipairs({ "editor", "syntax", "treesitter", "lsp", "ft" }) do
 		local mod = require("gondolin.groups." .. group)
-		for hl, spec in pairs(mod.setup(colors, opts)) do
+		for hl, spec in pairs(mod.get(colors, opts)) do
 			groups[hl] = spec
 		end
 	end
