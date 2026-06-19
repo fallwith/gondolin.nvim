@@ -60,6 +60,7 @@
 | **keywordDirective** | ![FFCAEE](https://placehold.co/40x15/FFCAEE/FFCAEE.png) | `#FFCAEE` |
 | **keywordExport** | ![A9E1EB](https://placehold.co/40x15/A9E1EB/A9E1EB.png) | `#A9E1EB` |
 | **label** | ![95D1EC](https://placehold.co/40x15/95D1EC/95D1EC.png) | `#95D1EC` |
+| **lineNumber** | ![3D4550](https://placehold.co/40x15/3D4550/3D4550.png) | `#3D4550` |
 | **linkText** | ![CACBFF](https://placehold.co/40x15/CACBFF/CACBFF.png) | `#CACBFF` |
 | **linkUri** | ![9CBAFF](https://placehold.co/40x15/9CBAFF/9CBAFF.png) | `#9CBAFF` |
 | **modeCommand** | ![FFE878](https://placehold.co/40x15/FFE878/FFE878.png) | `#FFE878` |
