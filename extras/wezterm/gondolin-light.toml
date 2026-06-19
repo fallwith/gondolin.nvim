@@ -42,7 +42,7 @@ brights = [
 17 = "#aa544d"
 
 [colors.tab_bar]
-background = "#f8f1e7"
+background = "#eee4d6"
 inactive_tab_edge = "#637827"
 
 [colors.tab_bar.active_tab]
@@ -52,7 +52,7 @@ intensity = "Bold"
 
 [colors.tab_bar.inactive_tab]
 fg_color = "#829181"
-bg_color = "#f8f1e7"
+bg_color = "#eee4d6"
 
 [colors.tab_bar.inactive_tab_hover]
 fg_color = "#aa544d"
@@ -60,7 +60,7 @@ bg_color = "#f4efe6"
 
 [colors.tab_bar.new_tab]
 fg_color = "#829181"
-bg_color = "#f8f1e7"
+bg_color = "#eee4d6"
 
 [colors.tab_bar.new_tab_hover]
 fg_color = "#aa544d"

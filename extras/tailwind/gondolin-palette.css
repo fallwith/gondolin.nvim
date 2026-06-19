@@ -61,6 +61,7 @@
   --color-gondolin-keyword-directive: oklch(from #FFCAEE l c h);
   --color-gondolin-keyword-export: oklch(from #A9E1EB l c h);
   --color-gondolin-label: oklch(from #95D1EC l c h);
+  --color-gondolin-line-number: oklch(from #3D4550 l c h);
   --color-gondolin-link-text: oklch(from #CACBFF l c h);
   --color-gondolin-link-uri: oklch(from #9CBAFF l c h);
   --color-gondolin-mode-command: oklch(from #FFE878 l c h);

@@ -10,41 +10,41 @@ M = {
   normal_mode = {
     a = { fg = "#f8f1e7", bg = "#46778d" },
     b = { fg = "#46778d", bg = "#f8f1e7" },
-    c = { fg = "#829181", bg = "#f8f1e7" },
+    c = { fg = "#829181", bg = "#eee4d6" },
   },
   copy_mode = {
     a = { fg = "#f8f1e7", bg = "#477f5e" },
     b = { fg = "#477f5e", bg = "#f8f1e7" },
-    c = { fg = "#829181", bg = "#f8f1e7" },
+    c = { fg = "#829181", bg = "#eee4d6" },
   },
   search_mode = {
     a = { fg = "#f8f1e7", bg = "#85647f" },
     b = { fg = "#85647f", bg = "#f8f1e7" },
-    c = { fg = "#829181", bg = "#f8f1e7" },
+    c = { fg = "#829181", bg = "#eee4d6" },
   },
   window_mode = {
     a = { fg = "#f8f1e7", bg = "#637827" },
     b = { fg = "#637827", bg = "#f8f1e7" },
-    c = { fg = "#829181", bg = "#f8f1e7" },
+    c = { fg = "#829181", bg = "#eee4d6" },
   },
   resize_mode = {
     a = { fg = "#f8f1e7", bg = "#aa5f1b" },
     b = { fg = "#aa5f1b", bg = "#f8f1e7" },
-    c = { fg = "#829181", bg = "#f8f1e7" },
+    c = { fg = "#829181", bg = "#eee4d6" },
   },
   tab_mode = {
     a = { fg = "#f8f1e7", bg = "#46778d" },
     b = { fg = "#46778d", bg = "#f8f1e7" },
-    c = { fg = "#829181", bg = "#f8f1e7" },
+    c = { fg = "#829181", bg = "#eee4d6" },
   },
   default_mode = {
     a = { fg = "#f8f1e7", bg = "#aa544d" },
     b = { fg = "#aa544d", bg = "#f8f1e7" },
-    c = { fg = "#829181", bg = "#f8f1e7" },
+    c = { fg = "#829181", bg = "#eee4d6" },
   },
   tab = {
     active = { fg = '#46778d', bg = '#f4efe6', bold = true },
-    inactive = { fg = '#829181', bg = '#f8f1e7' },
+    inactive = { fg = '#829181', bg = '#eee4d6' },
     inactive_hover = { fg = '#aa544d', bg = '#f4efe6' },
   },
   ansi = {
