@@ -23,10 +23,10 @@
   
   --color-gondolin-dark-content1: oklch(from #080A0D l c h);
   --color-gondolin-dark-content2: oklch(from #0E1114 l c h);
-  --color-gondolin-dark-content3: oklch(from #0d0f13 l c h);
+  --color-gondolin-dark-content3: oklch(from #101318 l c h);
   --color-gondolin-dark-content4: oklch(from #080A0D l c h);
   --color-gondolin-dark-content5: oklch(from #060809 l c h);
-  --color-gondolin-dark-panel: oklch(from #0d0f13 l c h);
+  --color-gondolin-dark-panel: oklch(from #101318 l c h);
 
   --color-gondolin-dark-rainbow1: oklch(from #FF7A77 l c h);
   --color-gondolin-dark-rainbow2: oklch(from #FFE878 l c h);
