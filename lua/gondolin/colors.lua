@@ -96,7 +96,7 @@ M.palette = {
 	-- Background Shades (darkest to lightest)
 	bg0 = "#060809", -- darkest (terminal dim black)
 	bg1 = "#080A0D", -- main editor background
-	bg2 = "#0d0f13", -- surface/panel background
+	bg2 = "#101318", -- surface/panel background
 	bg3 = "#0E1114", -- elevated surface
 	bg4 = "#1a1d23", -- active line, subheader
 	bg5 = "#1C2129", -- element background, borders

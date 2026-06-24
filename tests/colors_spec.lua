@@ -74,3 +74,17 @@ describe("light palette", function()
 		assert.same(theme.modes.command, theme.syn.constant)
 	end)
 end)
+
+describe("theme ui colors", function()
+	before_each(function()
+		Config.setup()
+	end)
+
+	for _, theme_name in ipairs({ "dark", "light" }) do
+		it(theme_name .. " gutter matches statusline", function()
+			local colors = Colors.setup({ _theme = theme_name })
+
+			assert.same(colors.theme.ui.bg_statusline, colors.theme.ui.bg_gutter)
+		end)
+	end
+end)
