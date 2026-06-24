@@ -1,4 +1,4 @@
-*gondolin.nvim.txt*          For NVIM v0.8.0         Last change: 2026 June 18
+*gondolin.nvim.txt*          For NVIM v0.8.0         Last change: 2026 June 24
 
 ==============================================================================
 Table of Contents                            *gondolin.nvim-table-of-contents*
@@ -65,6 +65,15 @@ Neovim:
 `gondolin` follows `vim.o.background`; use `gondolin-dark` or `gondolin-light`
 to force a variant.
 
+
+  [!NOTE] Gondolin colors floating-window borders (the `FloatBorder`,
+  `NormalFloat` and `FloatTitle` groups), but it does not decide _whether_ a
+  border is drawn — that is an editor setting, not a color. If hover (`K`),
+  diagnostics or other floats appear without a border, enable them yourself. On
+  Neovim 0.11+ the simplest way is the global option:
+  >lua
+      vim.o.winborder = "rounded" -- "single", "double", "solid", ...
+  <
 A full plugin spec example using lazy.nvim <https://github.com/folke/lazy.nvim>
 
 >lua
