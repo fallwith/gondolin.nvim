@@ -109,14 +109,14 @@
   --color-gondolin-term-blue: oklch(from #83AEF8 l c h);
   --color-gondolin-term-blue-bright: oklch(from #71FEFF l c h);
   --color-gondolin-term-blue-dim: oklch(from #6587B8 l c h);
-  --color-gondolin-term-cyan: oklch(from #83AEF8 l c h);
+  --color-gondolin-term-cyan: oklch(from #91D8CE l c h);
   --color-gondolin-term-cyan-bright: oklch(from #71FFDF l c h);
   --color-gondolin-term-cyan-dim: oklch(from #6587B8 l c h);
   --color-gondolin-term-green: oklch(from #B9EC86 l c h);
   --color-gondolin-term-green-bright: oklch(from #B9FF6C l c h);
   --color-gondolin-term-green-dim: oklch(from #8EB06A l c h);
   --color-gondolin-term-magenta: oklch(from #FF8DFF l c h);
-  --color-gondolin-term-magenta-bright: oklch(from #FF8DFF l c h);
+  --color-gondolin-term-magenta-bright: oklch(from #FFB3FF l c h);
   --color-gondolin-term-magenta-dim: oklch(from #D071D3 l c h);
   --color-gondolin-term-red: oklch(from #FF7A77 l c h);
   --color-gondolin-term-red-bright: oklch(from #FF7774 l c h);
@@ -125,7 +125,7 @@
   --color-gondolin-term-white-bright: oklch(from #ffffff l c h);
   --color-gondolin-term-white-dim: oklch(from #A4B3C8 l c h);
   --color-gondolin-term-yellow: oklch(from #FFE878 l c h);
-  --color-gondolin-term-yellow-bright: oklch(from #FFE878 l c h);
+  --color-gondolin-term-yellow-bright: oklch(from #FFF2A8 l c h);
   --color-gondolin-term-yellow-dim: oklch(from #D4B65F l c h);
   --color-gondolin-text: oklch(from #D6E0FF l c h);
   --color-gondolin-text-literal: oklch(from #AAE08A l c h);

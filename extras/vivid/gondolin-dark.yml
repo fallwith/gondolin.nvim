@@ -11,12 +11,12 @@ colors:
   yellow: 'FFE878'
   blue: '83AEF8'
   pink: 'FF8DFF'
-  cyan: '83AEF8'
+  cyan: '91D8CE'
 
   light_red: 'FF7774'
   light_green: 'B9FF6C'
   light_blue: '71FEFF'
-  light_pink: 'FF8DFF'
+  light_pink: 'FFB3FF'
   light_cyan: '71FFDF'
 
   black: '060809'

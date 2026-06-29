@@ -49,12 +49,12 @@
   --color-gondolin-dark-green: oklch(from #B9EC86 l c h);
   --color-gondolin-dark-green-bright: oklch(from #B9FF6C l c h);
   --color-gondolin-dark-yellow: oklch(from #FFE878 l c h);
-  --color-gondolin-dark-yellow-bright: oklch(from #FFE878 l c h);
+  --color-gondolin-dark-yellow-bright: oklch(from #FFF2A8 l c h);
   --color-gondolin-dark-blue: oklch(from #83AEF8 l c h);
   --color-gondolin-dark-blue-bright: oklch(from #71FEFF l c h);
   --color-gondolin-dark-magenta: oklch(from #FF8DFF l c h);
-  --color-gondolin-dark-magenta-bright: oklch(from #FF8DFF l c h);
-  --color-gondolin-dark-cyan: oklch(from #83AEF8 l c h);
+  --color-gondolin-dark-magenta-bright: oklch(from #FFB3FF l c h);
+  --color-gondolin-dark-cyan: oklch(from #91D8CE l c h);
   --color-gondolin-dark-cyan-bright: oklch(from #71FFDF l c h);
   --color-gondolin-dark-white: oklch(from #D6DAE7 l c h);
   --color-gondolin-dark-white-bright: oklch(from #ffffff l c h);

@@ -248,16 +248,16 @@ M.palette = {
 	termYellow = "#FFE878",
 	termBlue = "#83AEF8",
 	termMagenta = "#FF8DFF",
-	termCyan = "#83AEF8",
+	termCyan = "#91D8CE",
 	termWhite = "#D6DAE7",
 
 	-- Terminal Bright Colors
 	termBlackBright = "#505668",
 	termRedBright = "#FF7774",
 	termGreenBright = "#B9FF6C",
-	termYellowBright = "#FFE878",
+	termYellowBright = "#FFF2A8",
 	termBlueBright = "#71FEFF",
-	termMagentaBright = "#FF8DFF",
+	termMagentaBright = "#FFB3FF",
 	termCyanBright = "#71FFDF",
 	termWhiteBright = "#ffffff",
 
