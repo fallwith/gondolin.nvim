@@ -108,14 +108,14 @@
 | **termBlue** | ![83AEF8](https://placehold.co/40x15/83AEF8/83AEF8.png) | `#83AEF8` |
 | **termBlueBright** | ![71FEFF](https://placehold.co/40x15/71FEFF/71FEFF.png) | `#71FEFF` |
 | **termBlueDim** | ![6587B8](https://placehold.co/40x15/6587B8/6587B8.png) | `#6587B8` |
-| **termCyan** | ![83AEF8](https://placehold.co/40x15/83AEF8/83AEF8.png) | `#83AEF8` |
+| **termCyan** | ![91D8CE](https://placehold.co/40x15/91D8CE/91D8CE.png) | `#91D8CE` |
 | **termCyanBright** | ![71FFDF](https://placehold.co/40x15/71FFDF/71FFDF.png) | `#71FFDF` |
 | **termCyanDim** | ![6587B8](https://placehold.co/40x15/6587B8/6587B8.png) | `#6587B8` |
 | **termGreen** | ![B9EC86](https://placehold.co/40x15/B9EC86/B9EC86.png) | `#B9EC86` |
 | **termGreenBright** | ![B9FF6C](https://placehold.co/40x15/B9FF6C/B9FF6C.png) | `#B9FF6C` |
 | **termGreenDim** | ![8EB06A](https://placehold.co/40x15/8EB06A/8EB06A.png) | `#8EB06A` |
 | **termMagenta** | ![FF8DFF](https://placehold.co/40x15/FF8DFF/FF8DFF.png) | `#FF8DFF` |
-| **termMagentaBright** | ![FF8DFF](https://placehold.co/40x15/FF8DFF/FF8DFF.png) | `#FF8DFF` |
+| **termMagentaBright** | ![FFB3FF](https://placehold.co/40x15/FFB3FF/FFB3FF.png) | `#FFB3FF` |
 | **termMagentaDim** | ![D071D3](https://placehold.co/40x15/D071D3/D071D3.png) | `#D071D3` |
 | **termRed** | ![FF7A77](https://placehold.co/40x15/FF7A77/FF7A77.png) | `#FF7A77` |
 | **termRedBright** | ![FF7774](https://placehold.co/40x15/FF7774/FF7774.png) | `#FF7774` |
@@ -124,7 +124,7 @@
 | **termWhiteBright** | ![ffffff](https://placehold.co/40x15/ffffff/ffffff.png) | `#ffffff` |
 | **termWhiteDim** | ![A4B3C8](https://placehold.co/40x15/A4B3C8/A4B3C8.png) | `#A4B3C8` |
 | **termYellow** | ![FFE878](https://placehold.co/40x15/FFE878/FFE878.png) | `#FFE878` |
-| **termYellowBright** | ![FFE878](https://placehold.co/40x15/FFE878/FFE878.png) | `#FFE878` |
+| **termYellowBright** | ![FFF2A8](https://placehold.co/40x15/FFF2A8/FFF2A8.png) | `#FFF2A8` |
 | **termYellowDim** | ![D4B65F](https://placehold.co/40x15/D4B65F/D4B65F.png) | `#D4B65F` |
 | **text** | ![D6E0FF](https://placehold.co/40x15/D6E0FF/D6E0FF.png) | `#D6E0FF` |
 | **textLiteral** | ![AAE08A](https://placehold.co/40x15/AAE08A/AAE08A.png) | `#AAE08A` |
