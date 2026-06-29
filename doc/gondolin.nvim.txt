@@ -1,4 +1,4 @@
-*gondolin.nvim.txt*          For NVIM v0.8.0         Last change: 2026 June 24
+*gondolin.nvim.txt*          For NVIM v0.8.0         Last change: 2026 June 29
 
 ==============================================================================
 Table of Contents                            *gondolin.nvim-table-of-contents*
@@ -355,6 +355,7 @@ and use them in your `opts` function. Example:
 EXTRAS                                                  *gondolin.nvim-extras*
 
 - alacritty <extras/alacritty>
+- blink <extras/blink> (guide: Blink.sh themes <https://docs.blink.sh/advanced/themes-and-fonts>)
 - foot <extras/foot>
 - fzf <extras/fzf> (guide: fzf color schemes <https://github.com/junegunn/fzf/wiki/Color-schemes>)
 - ghostty <extras/ghostty>
