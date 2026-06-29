@@ -312,6 +312,7 @@ and use them in your `opts` function. Example:
 ## Extras
 
 - [alacritty](extras/alacritty)
+- [blink](extras/blink) (guide: [Blink.sh themes](https://docs.blink.sh/advanced/themes-and-fonts))
 - [foot](extras/foot)
 - [fzf](extras/fzf) (guide: [fzf color schemes](https://github.com/junegunn/fzf/wiki/Color-schemes))
 - [ghostty](extras/ghostty)

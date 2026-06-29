@@ -8,6 +8,7 @@ local M = {}
 -- stylua: ignore
 M.mapping = {
   alacritty        = { ext = "toml", url = "https://github.com/alacritty/alacritty", label = "Alacritty" },
+  blink            = { ext = "js", url = "https://github.com/blinksh/blink", label = "Blink" },
   foot             = { ext = "ini", url= "https://codeberg.org/dnkl/foot", label = "Foot" },
   fzf              = { ext = "rc", url = "https://github.com/junegunn/fzf/tree/master#environment-variables", label = "Fzf" },
   ghostty          = { ext = "", url = "https://github.com/ghostty-org/ghostty", label = "Ghostty" },
