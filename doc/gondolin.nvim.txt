@@ -1,4 +1,4 @@
-*gondolin.nvim.txt*          For NVIM v0.8.0         Last change: 2026 June 29
+*gondolin.nvim.txt*          For NVIM v0.8.0         Last change: 2026 July 15
 
 ==============================================================================
 Table of Contents                            *gondolin.nvim-table-of-contents*
@@ -373,6 +373,7 @@ EXTRAS                                                  *gondolin.nvim-extras*
 - wezterm <extras/wezterm> (guide: Defining a Color Scheme in a separate file <https://wezfurlong.org/wezterm/config/appearance.html#defining-a-color-scheme-in-a-separate-file>)
 - wezterm tabline <extras/wezterm_tabline> (guide: tabline.wez <https://github.com/michaelbrusegard/tabline.wez>)
 - windows terminal <extras/windows_terminal> (guide: Color schemes in Windows Terminal <https://learn.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes>)
+- zed <extras/zed> (guide: Zed themes <https://zed.dev/docs/extensions/themes>)
 - zellij <extras/zellij>
 
 
