@@ -26,6 +26,7 @@ M.mapping = {
   windows_terminal = { ext = "jsonc", url = "https://learn.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes", label = "Windows Terminal" },
   vscode_terminal  = { ext = "jsonc", url = "https://code.visualstudio.com/api/references/theme-color", label = "VSCode Terminal" },
   vivid            = { ext = "yml", url= "https://github.com/sharkdp/vivid", label = "Vivid" },
+  zed              = { ext = "json", url = "https://zed.dev/docs/extensions/themes", label = "Zed" },
   zellij           = { ext = "kdl", url= "https://zellij.dev/", label = "Zellij" },
 }
 

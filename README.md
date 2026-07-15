@@ -330,6 +330,7 @@ and use them in your `opts` function. Example:
 - [wezterm](extras/wezterm) (guide: [Defining a Color Scheme in a separate file](https://wezfurlong.org/wezterm/config/appearance.html#defining-a-color-scheme-in-a-separate-file))
 - [wezterm tabline](extras/wezterm_tabline) (guide: [tabline.wez](https://github.com/michaelbrusegard/tabline.wez))
 - [windows terminal](extras/windows_terminal) (guide: [Color schemes in Windows Terminal](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes))
+- [zed](extras/zed) (guide: [Zed themes](https://zed.dev/docs/extensions/themes))
 - [zellij](extras/zellij)
 
 ## Contributing
